@@ -13,12 +13,12 @@ public class GameController : MonoBehaviour {
     public GameObject questionDisplay;
     public GameObject roundEndDisplay;
 
-    //private GameObject healthText;
     private CharacterHealth characterHealth;
     private DataController dataController;
     private RoundData currentRoundData;
     private QuestionData[] questionPool;
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
+    //private QuestionPopUp questionPop;
 
     // Use this for initialization
     void Start() {
@@ -29,6 +29,8 @@ public class GameController : MonoBehaviour {
 
         characterHealth = FindObjectOfType<CharacterHealth>();
 
+        //questionPop = FindObjectOfType<QuestionPopUp>();
+
         ShowQuestion();
     }
 
@@ -38,7 +40,6 @@ public class GameController : MonoBehaviour {
         int randomIndex = Random.Range(0, questionPool.Length);
         QuestionData questionData = questionPool[randomIndex];
         questionDisplayText.text = questionData.questionText;
-
         for (int i = 0; i < questionData.answers.Length; i++) {
             GameObject answerButtonGameObject = answerButtonObjectPool.GetObject();
             answerButtonGameObject.transform.SetParent(answerButtonParent);
@@ -68,6 +69,7 @@ public class GameController : MonoBehaviour {
 
     public void ExitQuestion() {
         questionDisplay.SetActive(false);
+        //questionPop.
     }
 
     // Update is called once per frame
