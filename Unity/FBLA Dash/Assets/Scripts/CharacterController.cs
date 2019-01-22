@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CharacterController : MonoBehaviour {
+   
     //movement variables
     public float maxSpeed;
 
