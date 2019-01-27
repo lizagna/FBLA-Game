@@ -8,7 +8,6 @@ public class CharacterHealth : MonoBehaviour {
     public float fullHealth;
     public float currentHealth;
 
-    Animator anim;
 
     //CharacterController controlMovement;
 
@@ -23,8 +22,6 @@ public class CharacterHealth : MonoBehaviour {
         // Health bar initialization
         healthSlider.maxValue = fullHealth;
         healthSlider.value = fullHealth;
-
-        anim = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame

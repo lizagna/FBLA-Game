@@ -5,8 +5,8 @@ using UnityEngine;
 public class QuestionPopUp : MonoBehaviour {
     
     public GameObject questionPanel;
-    public GameObject explosionEffect;
-    public Transform explosionLocation;
+    //public GameObject explosionEffect;
+    //public Transform explosionLocation;
 
     GameController gameController;
 
@@ -21,13 +21,9 @@ public class QuestionPopUp : MonoBehaviour {
         if (col.gameObject.tag == "Sign") {
             questionPanel.gameObject.SetActive(true);
             gameController.ShowQuestion();
-            Instantiate(explosionEffect, explosionLocation.position, transform.rotation = Quaternion.identity);
+            //Instantiate(explosionEffect, explosionLocation.position, transform.rotation = Quaternion.identity);
             Destroy(col.gameObject);  
         }
     }
-
-    //public void DestroySign() {
-       // Instantiate(explosionEffect, explosionLocation.position, transform.rotation = Quaternion.identity);
-    //}
 
 }

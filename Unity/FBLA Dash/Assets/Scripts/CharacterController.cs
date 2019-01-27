@@ -26,13 +26,20 @@ public class CharacterController : MonoBehaviour {
     public Transform groundCheck;
     public float jumpHeight;
 
+    //question pop up variables
+    public GameObject questionPanel;
+    GameController gameController;
+
 
     void Start() {
-        //questionPanel.gameObject.SetActive(false);
         anim = GetComponent<Animator>();
         rigBody = GetComponent<Rigidbody2D>();
 
         facingRight = true;
+
+        //Pops up question when collide with sign
+        gameController = FindObjectOfType<GameController>();
+        questionPanel.gameObject.SetActive(false);
     }
 
     void Update() {
@@ -56,12 +63,13 @@ public class CharacterController : MonoBehaviour {
 
     void FixedUpdate() {
         //check if we are grounded if no, the we fall
-        grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+       grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         anim.SetBool("isGrounded", grounded);
 
-        anim.SetFloat("verticalSpeed", rigBody.velocity.y);
+        anim.SetFloat("verticalSpeed", rigBody.velocity.y); 
 
-        float move = Input.GetAxis("Horizontal");
+        //character movement
+        float move = Input.GetAxis("Horizontal");                                       // returns value between -1 and 1
         anim.SetFloat("speed", Mathf.Abs(move));
 
         rigBody.velocity = new Vector2(move * maxSpeed, rigBody.velocity.y);
@@ -78,9 +86,19 @@ public class CharacterController : MonoBehaviour {
             theScale.x *= -1;
             transform.localScale = theScale;
         }
-        
+
+    //question pop up
+    private void OnCollisionEnter2D(Collision2D col) {
+        if (col.gameObject.tag == "Sign") {
+            questionPanel.gameObject.SetActive(true);
+            gameController.ShowQuestion();
+            //Instantiate(explosionEffect, explosionLocation.position, transform.rotation = Quaternion.identity);
+            Destroy(col.gameObject);
+        }
+    }
+
     // throws fire forwards and reverse
-        void throwFire() {
+    void throwFire() {
             if(Time.time > nextFire) {
             nextFire = Time.time + fireRate;
                 if (facingRight) {

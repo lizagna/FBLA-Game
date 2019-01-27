@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour {
     private RoundData currentRoundData;
     private QuestionData[] questionPool;
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
-    //private QuestionPopUp questionPop;
+    
 
     // Use this for initialization
     void Start() {
@@ -29,7 +29,6 @@ public class GameController : MonoBehaviour {
 
         characterHealth = FindObjectOfType<CharacterHealth>();
 
-        //questionPop = FindObjectOfType<QuestionPopUp>();
 
         ShowQuestion();
     }
@@ -69,7 +68,6 @@ public class GameController : MonoBehaviour {
 
     public void ExitQuestion() {
         questionDisplay.SetActive(false);
-        //questionPop.
     }
 
     // Update is called once per frame
