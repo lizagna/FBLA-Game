@@ -1105,7 +1105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionDisplayText: {fileID: 1628150294}
-  scoreDisplayText: {fileID: 0}
+  scoreDisplayText: {fileID: 1716480266}
   answerButtonObjectPool: {fileID: 2040482260}
   answerButtonParent: {fileID: 825529427}
   questionDisplay: {fileID: 1542231102}
@@ -1571,7 +1571,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 218.6, y: 140}
+  m_AnchoredPosition: {x: 209, y: 136}
   m_SizeDelta: {x: 190.7, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1716480266
