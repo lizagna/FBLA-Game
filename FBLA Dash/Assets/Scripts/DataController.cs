@@ -11,7 +11,6 @@ public class DataController : MonoBehaviour {
     void Start ()  {
         DontDestroyOnLoad (gameObject);
 
-        //SceneManager.LoadScene ("QuestionBox");
     }
 
     public RoundData GetCurrentRoundData() {
