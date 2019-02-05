@@ -33,6 +33,9 @@ public class CharacterController : MonoBehaviour {
 
     CharacterHealth characterHealth;
 
+    //[SerializeField]
+    public int score;
+
 
     void Start() {
         anim = GetComponent<Animator>();
@@ -86,8 +89,7 @@ public class CharacterController : MonoBehaviour {
 
     }
 
-
-
+    //flips direction character is facing 
     void flip() {
         facingRight = !facingRight;
         Vector3 theScale = transform.localScale;
@@ -95,22 +97,31 @@ public class CharacterController : MonoBehaviour {
         transform.localScale = theScale;
     }
 
-    //question pop up
     private void OnCollisionEnter2D(Collision2D col) {
+        //question pop up
         if (col.gameObject.tag == "Sign") {
             questionPanel.gameObject.SetActive(true);
             gameController.ShowQuestion();
-            //Instantiate(explosionEffect, explosionLocation.position, transform.rotation = Quaternion.identity);
             Destroy(col.gameObject);
+            //Instantiate(explosionEffect, explosionLocation.position, transform.rotation = Quaternion.identity);
         }
 
-        // on moving platform
+        //on moving platform
         if (col.gameObject.tag == "Ground")
             this.transform.parent = col.transform;
 
+        //encounter spike enemy
         if (col.gameObject.tag == "Enemy")
             characterHealth.addDamage(5);
 
+        //encounter diamond then convert to points
+        if (col.gameObject.tag == "Diamond") {
+            score += 2;
+            gameController.scoreDisplayText.text = (score + gameController.score).ToString();
+            Destroy(col.gameObject);
+        }
+
+        //go through portal and take to next level
         if (col.gameObject.tag == "PortalToLevel2")
             SceneManager.LoadScene("Level2");
     }
@@ -119,6 +130,7 @@ public class CharacterController : MonoBehaviour {
         if (col.gameObject.tag == "Ground")
             this.transform.parent = null;
     }
+
 
     // throws fire forwards and reverse
     void throwFire() {
