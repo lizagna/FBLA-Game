@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour {
     public GameObject roundEndDisplay;
 
     private CharacterHealth characterHealth;
-    int score;
+    private int score;
     private DataController dataController;
     private RoundData currentRoundData;
     private QuestionData[] questionPool;
@@ -62,8 +62,6 @@ public class GameController : MonoBehaviour {
         if (isCorrect) {
             score += currentRoundData.pointsAddedForCorrectAnswer;
             scoreDisplayText.text = score.ToString();
-            
-            //characterHealth.currentHealth += 5;
         } else {
             characterHealth.addDamage(10);
         }
