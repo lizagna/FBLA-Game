@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour {
     public GameObject roundEndDisplay;
 
     private CharacterHealth characterHealth;
-    private int score;
+    static private int score;
     private DataController dataController;
     private RoundData currentRoundData;
     private QuestionData[] questionPool;

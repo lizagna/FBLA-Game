@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class CharacterHealth : MonoBehaviour {
 
-    public float fullHealth;
-    public float currentHealth;
+    static public float fullHealth = 100f;
+    static public float currentHealth;
 
 
     //CharacterController controlMovement;
@@ -39,6 +39,7 @@ public class CharacterHealth : MonoBehaviour {
     }
 
     public void makeDead() {
-        Application.Quit();
+        //TODO: death animation
+        //Application.Quit();
     }
 }

@@ -31,13 +31,13 @@ public class CharacterController : MonoBehaviour {
     public GameObject questionPanel;
     GameController gameController;
 
-    //moving platform variables
-    float dirX, movingSpeed = 5f;
+    CharacterHealth characterHealth;
 
 
     void Start() {
         anim = GetComponent<Animator>();
         rigBody = GetComponent<Rigidbody2D>();
+        characterHealth = FindObjectOfType<CharacterHealth>();
 
         facingRight = true;
 
@@ -84,7 +84,6 @@ public class CharacterController : MonoBehaviour {
             flip();
         }
 
-        //rigBody.velocity = new Vector2(dirX, rigBody.velocity.y);  
     }
 
 
@@ -109,6 +108,9 @@ public class CharacterController : MonoBehaviour {
         if (col.gameObject.tag == "Ground")
             this.transform.parent = col.transform;
 
+        if (col.gameObject.tag == "Enemy")
+            characterHealth.addDamage(5);
+
         if (col.gameObject.tag == "PortalToLevel2")
             SceneManager.LoadScene("Level2");
     }
@@ -117,21 +119,6 @@ public class CharacterController : MonoBehaviour {
         if (col.gameObject.tag == "Ground")
             this.transform.parent = null;
     }
-
-
-
-    /*private void OnCollisionEnter2D(Collision2D col) {
-        if (col.gameObject.tag == "Ground")
-            this.transform.parent = col.transform;
-    }
-
-    private void OnCollisionExit2D(Collision2D col) {
-        if (col.gameObject.tag == "Ground") {
-            this.transform.parent = null;
-        }
-    }
-
-    */
 
     // throws fire forwards and reverse
     void throwFire() {
