@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CharacterController : MonoBehaviour {
    
@@ -107,6 +108,9 @@ public class CharacterController : MonoBehaviour {
         // on moving platform
         if (col.gameObject.tag == "Ground")
             this.transform.parent = col.transform;
+
+        if (col.gameObject.tag == "PortalToLevel2")
+            SceneManager.LoadScene("Level2");
     }
 
     private void OnCollisionExit2D(Collision2D col) {
