@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingPlatform : MonoBehaviour {
+public class MovingPlatformX : MonoBehaviour {
 
-    public float minX;
-    public float maxX;
+    public float min;
+    public float max;
+    public float movingSpeed;
 
-    private float dirX, movingSpeed = 3f;
     private bool isMovingRight;
 
     void Update() {
-        if (transform.position.x > maxX)
+        if (transform.position.x > max)
             isMovingRight = false;
 
-        if (transform.position.x < minX)
+        if (transform.position.x < min)
             isMovingRight = true;
 
         if (isMovingRight)
