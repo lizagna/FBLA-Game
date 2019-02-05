@@ -36,8 +36,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1150169581731620}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.97, y: -5.81, z: 0.2}
-  m_LocalScale: {x: 9.588329, y: 5.677067, z: 1}
+  m_LocalPosition: {x: 8.5, y: 2.38, z: 0.2}
+  m_LocalScale: {x: 1.1377233, y: 1.028073, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -54,7 +54,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.25048256, y: -0.027011715}
+  m_Offset: {x: -3.971609, y: 0.09715971}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -65,7 +65,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.170656, y: 0.2058071}
+  m_Size: {x: 1.749053, y: 0.9247795}
   m_EdgeRadius: 0
 --- !u!114 &114183077570997066
 MonoBehaviour:
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
-    - position: {x: -4.1564336, y: -0.016429855, z: 0}
+    - position: {x: -4.8418555, y: 0.124427594, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -90,7 +90,7 @@ MonoBehaviour:
       bevelSize: 0
       spriteIndex: 0
       corner: 0
-    - position: {x: 3.624668, y: 0.016900618, z: 0}
+    - position: {x: -3.0966077, y: 0.124051765, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -145,7 +145,7 @@ SpriteShapeRenderer:
   m_MaskInteraction: 0
   m_ShapeTexture: {fileID: 0}
   m_Sprites:
-  - {fileID: 21300000, guid: 7d5495826b1afbc40ae3e1b0e1ded883, type: 3}
+  - {fileID: 21300002, guid: 6f4ce693cedbabc428c3c040a6871877, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -155,5 +155,5 @@ SpriteShapeRenderer:
   - {fileID: 0}
   - {fileID: 0}
   m_LocalAABB:
-    m_Center: {x: -0.27088284, y: 0.00021395832, z: 0}
-    m_Extent: {x: 4.041106, y: 0.14723969, z: 0}
+    m_Center: {x: -3.9692316, y: 0.12423971, z: 0}
+    m_Extent: {x: 0.8727317, y: 0.5001879, z: 0}

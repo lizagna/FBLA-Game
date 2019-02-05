@@ -30,6 +30,9 @@ public class CharacterController : MonoBehaviour {
     public GameObject questionPanel;
     GameController gameController;
 
+    //moving platform variables
+    float dirX, movingSpeed = 5f;
+
 
     void Start() {
         anim = GetComponent<Animator>();
@@ -63,7 +66,7 @@ public class CharacterController : MonoBehaviour {
 
     void FixedUpdate() {
         //check if we are grounded if no, the we fall
-       grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         anim.SetBool("isGrounded", grounded);
 
         anim.SetFloat("verticalSpeed", rigBody.velocity.y); 
@@ -79,13 +82,18 @@ public class CharacterController : MonoBehaviour {
         } else if (move < 0 && facingRight) {
             flip();
         }
+
+        //rigBody.velocity = new Vector2(dirX, rigBody.velocity.y);  
     }
-        void flip() {
-            facingRight = !facingRight;
-            Vector3 theScale = transform.localScale;
-            theScale.x *= -1;
-            transform.localScale = theScale;
-        }
+
+
+
+    void flip() {
+        facingRight = !facingRight;
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+    }
 
     //question pop up
     private void OnCollisionEnter2D(Collision2D col) {
@@ -95,20 +103,42 @@ public class CharacterController : MonoBehaviour {
             //Instantiate(explosionEffect, explosionLocation.position, transform.rotation = Quaternion.identity);
             Destroy(col.gameObject);
         }
+
+        // on moving platform
+        if (col.gameObject.tag == "Ground")
+            this.transform.parent = col.transform;
     }
+
+    private void OnCollisionExit2D(Collision2D col) {
+        if (col.gameObject.tag == "Ground")
+            this.transform.parent = null;
+    }
+
+
+
+    /*private void OnCollisionEnter2D(Collision2D col) {
+        if (col.gameObject.tag == "Ground")
+            this.transform.parent = col.transform;
+    }
+
+    private void OnCollisionExit2D(Collision2D col) {
+        if (col.gameObject.tag == "Ground") {
+            this.transform.parent = null;
+        }
+    }
+
+    */
 
     // throws fire forwards and reverse
     void throwFire() {
-            if(Time.time > nextFire) {
+        if (Time.time > nextFire) {
             nextFire = Time.time + fireRate;
-                if (facingRight) {
-                    Instantiate(fire, fireEject.position, Quaternion.Euler(new Vector3 (0,0,0)));
-                } 
-                else if (!facingRight) {
-                    Instantiate(fire, fireEject.position, Quaternion.Euler(new Vector3 (0,0,180f)));
-                }
+            if (facingRight) {
+                Instantiate(fire, fireEject.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+            } else if (!facingRight) {
+                Instantiate(fire, fireEject.position, Quaternion.Euler(new Vector3(0, 0, 180f)));
             }
-
         }
-    
+
+    }
 }
