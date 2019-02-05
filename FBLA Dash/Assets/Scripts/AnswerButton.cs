@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class AnswerButton : MonoBehaviour {
 
-    public Text answerText;
+    public TextMeshProUGUI answerText;
     private AnswerData answerData;
     private GameController gameController;
 

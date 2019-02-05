@@ -39,7 +39,7 @@ public class CharacterHealth : MonoBehaviour {
     }
 
     public void makeDead() {
-        //TODO: death animation
+        //TODO death animation uwu
         //Application.Quit();
     }
 }
