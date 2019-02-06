@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// keep track of game charecter's health
@@ -48,7 +49,6 @@ public class CharacterHealth : MonoBehaviour {
     /// game over, character's health falls below recovery points
     /// </summary>
     public void makeDead() {
-        //TODO death animation uwu
-        //Application.Quit();
+        SceneManager.LoadScene("MainMenu");
     }
 }

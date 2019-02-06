@@ -38,7 +38,7 @@ public class GameController : MonoBehaviour {
 
         characterHealth = FindObjectOfType<CharacterHealth>();
         characterController = FindObjectOfType<CharacterController>();
-        answerScore = PlayerPrefs.GetInt("AnswerScore"); ;
+        answerScore = 0;   //PlayerPrefs.GetInt("AnswerScore"); 
 
         ShowQuestion();
     }
