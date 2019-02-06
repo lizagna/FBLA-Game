@@ -18,12 +18,6 @@ public class CharacterController : MonoBehaviour {
     Rigidbody2D rigBody;
     bool facingRight;
 
-    // for shooting
-    public Transform fireEject;
-    public GameObject fire;
-    float fireRate = 0.5f;
-    float nextFire = 0f;
-
     //jumping variables
     bool grounded = false;
     float groundCheckRadius = 0.2f;
@@ -65,11 +59,6 @@ public class CharacterController : MonoBehaviour {
             rigBody.AddForce(new Vector2(0, jumpHeight));
         }
 
-        // player shooting
-        if (Input.GetAxisRaw("Fire1") > 0) {
-            throwFire();
-            //Instantiate(fire, transform.position, Quaternion.identity);
-        }
 
         if (Input.GetKey(KeyCode.Escape)) {
             Application.Quit();
@@ -159,18 +148,5 @@ public class CharacterController : MonoBehaviour {
     }
 
 
-    /// <summary>
-    /// throws fire forwards and reverse depending on the current direction facing.
-    /// </summary>
-    void throwFire() {
-        if (Time.time > nextFire) {
-            nextFire = Time.time + fireRate;
-            if (facingRight) {
-                Instantiate(fire, fireEject.position, Quaternion.Euler(new Vector3(0, 0, 0)));
-            } else if (!facingRight) {
-                Instantiate(fire, fireEject.position, Quaternion.Euler(new Vector3(0, 0, 180f)));
-            }
-        }
-
-    }
+   
 }
