@@ -124,27 +124,37 @@ public class CharacterController : MonoBehaviour {
         //encounter spike enemy
         else if (col.gameObject.tag == "Enemy") {
             characterHealth.addDamage(5);
-            characterAudio.clip = ;
+            // characterAudio.clip = ;
             PlayerPrefs.SetFloat("CharacterHealth", characterHealth.currentHealth);
         }
 
         //encounter diamond then convert to points
         else if (col.gameObject.tag == "Gem") {
-            diamondScore += 2;
-            gameController.scoreDisplayText.text = (diamondScore + gameController.answerScore).ToString();
-            PlayerPrefs.SetInt("DiamondScore", diamondScore);
+            diamondScore += (2);
+            gameController.scoreDisplayText.text = (diamondScore).ToString();
+            PlayerPrefs.SetInt("totalScores", diamondScore);
             Destroy(col.gameObject);
-        } 
+        }
 
         //go through portal and take to next level
-        else if (col.gameObject.tag == "Level2Portal")
-            SceneManager.LoadScene("Level3"); 
+        else if (col.gameObject.tag == "Level2Portal") { 
+            SceneManager.LoadScene("Level3");
+        PlayerPrefs.SetInt("Level", 2);
+    }
 
-        else if (col.gameObject.tag == "Level3Portal")
+        else if (col.gameObject.tag == "Level3Portal") {
             SceneManager.LoadScene("Level2");
-
-        else if (col.gameObject.tag == "GameOver")
+             PlayerPrefs.SetInt("Level", 3);
+        }
+        
+        else if (col.gameObject.tag == "GameOver") {
+            PlayerPrefs.SetInt("Level", 1);
+            diamondScore = 0;
+            PlayerPrefs.SetInt("totalScores", diamondScore);
+            gameController.scoreDisplayText.text = "0";
+            characterHealth.currentHealth = characterHealth.fullHealth;
             SceneManager.LoadScene("MainMenu");
+        }
     }
 
     /// <summary>
