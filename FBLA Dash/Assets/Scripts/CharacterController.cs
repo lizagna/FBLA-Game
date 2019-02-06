@@ -124,6 +124,9 @@ public class CharacterController : MonoBehaviour {
         }
 
         //go through portal and take to next level
+        if (col.gameObject.tag == "PortalToLevel2")
+            SceneManager.LoadScene("Level2");
+
         if (col.gameObject.tag == "PortalToLevel3")
             SceneManager.LoadScene("Level3");
     }
