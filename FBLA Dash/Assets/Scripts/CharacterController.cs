@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
+/// <summary>
+/// control and orchestrate game character's behaviors
+/// </summary>
 public class CharacterController : MonoBehaviour {
    
     //movement variables
@@ -35,7 +39,9 @@ public class CharacterController : MonoBehaviour {
     
     public int diamondScore;
 
-
+    /// <summary>
+    /// initialize object variables
+    /// </summary>
     void Start() {
         anim = GetComponent<Animator>();
         rigBody = GetComponent<Rigidbody2D>();
@@ -48,6 +54,9 @@ public class CharacterController : MonoBehaviour {
         questionPanel.gameObject.SetActive(false);
     }
 
+    /// <summary>
+    /// update graphic appearance 
+    /// </summary>
     void Update() {
         //check if character is off ground
         if (grounded && Input.GetAxis("Jump") > 0) {       
@@ -67,6 +76,9 @@ public class CharacterController : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// update physical movements
+    /// </summary>
     void FixedUpdate() {
         //check if we are grounded if no, the we fall
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
@@ -88,7 +100,9 @@ public class CharacterController : MonoBehaviour {
 
     }
 
-    //flips direction character is facing 
+    /// <summary>
+    /// flips direction character is facing
+    /// </summary>
     void flip() {
         facingRight = !facingRight;
         Vector3 theScale = transform.localScale;
@@ -96,6 +110,10 @@ public class CharacterController : MonoBehaviour {
         transform.localScale = theScale;
     }
 
+    /// <summary>
+    /// set the expected game behavior depending on the collided object
+    /// </summary>
+    /// <param name="col">collided object</param>
     private void OnCollisionEnter2D(Collision2D col) {
         //question pop up
         if (col.gameObject.tag == "Sign") {
@@ -131,13 +149,19 @@ public class CharacterController : MonoBehaviour {
             SceneManager.LoadScene("Level3");
     }
 
+    /// <summary>
+    /// ensure game object's state is properly set upon exitting the collission event
+    /// </summary>
+    /// <param name="col">collided object</param>
     private void OnCollisionExit2D(Collision2D col) {
         if (col.gameObject.tag == "Ground")
             this.transform.parent = null;
     }
 
 
-    // throws fire forwards and reverse
+    /// <summary>
+    /// throws fire forwards and reverse depending on the current direction facing.
+    /// </summary>
     void throwFire() {
         if (Time.time > nextFire) {
             nextFire = Time.time + fireRate;
