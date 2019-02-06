@@ -9,15 +9,12 @@ public class CharacterHealth : MonoBehaviour {
     static public float currentHealth;
 
 
-    //CharacterController controlMovement;
-
     // Heath bar variables
     public Slider healthSlider;
 
 	// Use this for initialization
 	void Start () {
         currentHealth = fullHealth;
-        //controlMovement = GetComponent<CharacterController>();
 
         // Health bar initialization
         healthSlider.maxValue = fullHealth;
@@ -30,10 +27,14 @@ public class CharacterHealth : MonoBehaviour {
 	}
 
     public void addDamage(float damage) {
-        if (damage <= 0) return;
+        if (damage <= 0)
+            return;
+
         currentHealth -= damage;
+
         healthSlider.value = currentHealth;
-        if(currentHealth <= 0) {
+
+        if (currentHealth <= 0) {
             makeDead();
         }
     }

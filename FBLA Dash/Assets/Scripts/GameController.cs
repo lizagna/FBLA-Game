@@ -14,9 +14,7 @@ public class GameController : MonoBehaviour {
     public Transform answerButtonParent;
     public GameObject questionDisplay;
     public GameObject roundEndDisplay;
-
-    //[SerializeField] 
-    public int score;
+    public int answerScore;
 
     private CharacterHealth characterHealth;
     private CharacterController characterController; 
@@ -35,7 +33,7 @@ public class GameController : MonoBehaviour {
 
         characterHealth = FindObjectOfType<CharacterHealth>();
         characterController = FindObjectOfType<CharacterController>(); 
-        score = 0;
+        answerScore = 0;
 
         ShowQuestion();
     }
@@ -64,8 +62,9 @@ public class GameController : MonoBehaviour {
 
     public void AnswerButtonClicked(bool isCorrect) {
         if (isCorrect) {
-            score += currentRoundData.pointsAddedForCorrectAnswer;
-            scoreDisplayText.text = (score + characterController.score).ToString();
+            answerScore += currentRoundData.pointsAddedForCorrectAnswer;
+            scoreDisplayText.text = (answerScore + characterController.diamondScore).ToString();
+            PlayerPrefs.SetInt("AnswerScore", answerScore);
         } else {
             characterHealth.addDamage(10);
         }

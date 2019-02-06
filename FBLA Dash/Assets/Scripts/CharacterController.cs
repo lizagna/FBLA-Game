@@ -32,9 +32,8 @@ public class CharacterController : MonoBehaviour {
     GameController gameController;
 
     CharacterHealth characterHealth;
-
-    //[SerializeField]
-    public int score;
+    
+    public int diamondScore;
 
 
     void Start() {
@@ -111,13 +110,16 @@ public class CharacterController : MonoBehaviour {
             this.transform.parent = col.transform;
 
         //encounter spike enemy
-        if (col.gameObject.tag == "Enemy")
+        if (col.gameObject.tag == "Enemy") {
             characterHealth.addDamage(5);
+            PlayerPrefs.SetFloat("CharacterHealth", CharacterHealth.currentHealth);
+        }
 
         //encounter diamond then convert to points
         if (col.gameObject.tag == "Diamond") {
-            score += 2;
-            gameController.scoreDisplayText.text = (score + gameController.score).ToString();
+            diamondScore += 2;
+            gameController.scoreDisplayText.text = (diamondScore + gameController.answerScore).ToString();
+            PlayerPrefs.SetInt("DiamondScore", diamondScore);
             Destroy(col.gameObject);
         }
 
