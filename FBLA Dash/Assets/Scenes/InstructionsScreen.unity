@@ -171,8 +171,9 @@ MonoBehaviour:
     as you can! The questions will be covering FBLA locations/ FBLA organization,
     bylaws, and handbook/ FBLA National Publications/ FBLA National Awards Program/
     \ FBLA Creed and national goals\r\n\nHeres how to play:\nPress \"a\" or left arrow
-    key to move left\nPress \"d\" or right arrow key to move right\nPress spacebar
-    to jump\nLeft click to answer questions"
+    key to move left. Press \"d\" or right arrow key to move right Press \"w\" or
+    the spacebar to jump. Left click to answer questions. And \"esc\" to quit the
+    game. \n\nAnd remember to have fun!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 89f0b160eefb509489bb2edbe44c86ab, type: 2}
   m_sharedMaterial: {fileID: 21770869200598114, guid: 89f0b160eefb509489bb2edbe44c86ab,
@@ -200,7 +201,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 16.5
+  m_fontSize: 15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -218,7 +219,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 464
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -241,12 +242,12 @@ MonoBehaviour:
   m_margin: {x: -172.42145, y: -47.478333, z: -179.91809, w: -56.153847}
   m_textInfo:
     textComponent: {fileID: 64903272}
-    characterCount: 419
+    characterCount: 489
     spriteCount: 0
-    spaceCount: 73
-    wordCount: 72
+    spaceCount: 89
+    wordCount: 86
     linkCount: 0
-    lineCount: 10
+    lineCount: 11
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -480,7 +481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.254717, g: 0.08770915, b: 0.08770915, a: 0.392}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

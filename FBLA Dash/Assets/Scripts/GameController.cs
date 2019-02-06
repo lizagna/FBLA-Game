@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour {
     public Transform answerButtonParent;
     public GameObject questionDisplay;
     public GameObject roundEndDisplay;
-    public int answerScore;
+    public int answerScore = 0;
 
     private CharacterHealth characterHealth;
     private CharacterController characterController;
@@ -38,7 +38,7 @@ public class GameController : MonoBehaviour {
 
         characterHealth = FindObjectOfType<CharacterHealth>();
         characterController = FindObjectOfType<CharacterController>();
-        answerScore = 0;   //PlayerPrefs.GetInt("AnswerScore"); 
+        answerScore = PlayerPrefs.GetInt("AnswerScore"); 
 
         ShowQuestion();
     }

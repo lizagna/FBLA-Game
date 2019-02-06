@@ -9,8 +9,8 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class CharacterHealth : MonoBehaviour {
 
-    static public float fullHealth = 100f;
-    static public float currentHealth;
+    public float fullHealth = 100f;
+    public float currentHealth;
 
 
     // Heath bar variables

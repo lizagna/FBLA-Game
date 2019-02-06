@@ -31,7 +31,10 @@ public class CharacterController : MonoBehaviour {
 
     CharacterHealth characterHealth;
     
-    public int diamondScore;
+    //score variable
+    public int diamondScore = 0;
+
+    AudioSource characterAudio;
 
     /// <summary>
     /// initialize object variables
@@ -40,12 +43,15 @@ public class CharacterController : MonoBehaviour {
         anim = GetComponent<Animator>();
         rigBody = GetComponent<Rigidbody2D>();
         characterHealth = FindObjectOfType<CharacterHealth>();
+        characterAudio = GetComponent<AudioSource>();
 
         facingRight = true;
 
         //Pops up question when collide with sign
         gameController = FindObjectOfType<GameController>();
         questionPanel.gameObject.SetActive(false);
+
+        diamondScore = PlayerPrefs.GetInt("DiamondScore");
     }
 
     /// <summary>
@@ -109,7 +115,6 @@ public class CharacterController : MonoBehaviour {
             questionPanel.gameObject.SetActive(true);
             gameController.ShowQuestion();
             Destroy(col.gameObject);
-            //Instantiate(explosionEffect, explosionLocation.position, transform.rotation = Quaternion.identity);
         }
 
         //on moving platform
@@ -119,7 +124,8 @@ public class CharacterController : MonoBehaviour {
         //encounter spike enemy
         else if (col.gameObject.tag == "Enemy") {
             characterHealth.addDamage(5);
-            PlayerPrefs.SetFloat("CharacterHealth", CharacterHealth.currentHealth);
+            characterAudio.clip = ;
+            PlayerPrefs.SetFloat("CharacterHealth", characterHealth.currentHealth);
         }
 
         //encounter diamond then convert to points
