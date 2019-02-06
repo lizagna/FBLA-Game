@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// keep track of game charecter's health
+/// </summary>
 public class CharacterHealth : MonoBehaviour {
 
     static public float fullHealth = 100f;
@@ -12,7 +15,9 @@ public class CharacterHealth : MonoBehaviour {
     // Heath bar variables
     public Slider healthSlider;
 
-	// Use this for initialization
+    /// <summary>
+    /// initialization
+    /// </summary>
 	void Start () {
         currentHealth = fullHealth;
 
@@ -21,11 +26,11 @@ public class CharacterHealth : MonoBehaviour {
         healthSlider.value = fullHealth;
     }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
+    /// <summary>
+    /// update chareacter's health
+    /// </summary>
+    /// <param name="damage"> points to be deducted fron current health</param>
     public void addDamage(float damage) {
         if (damage <= 0)
             return;
@@ -38,7 +43,10 @@ public class CharacterHealth : MonoBehaviour {
             makeDead();
         }
     }
-
+    
+    /// <summary>
+    /// game over, character's health falls below recovery points
+    /// </summary>
     public void makeDead() {
         //TODO death animation uwu
         //Application.Quit();

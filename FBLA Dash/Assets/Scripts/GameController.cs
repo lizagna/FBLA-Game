@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+/// <summary>
+/// keep track of game statistic
+/// </summary>
 public class GameController : MonoBehaviour {
 
 
@@ -24,8 +27,9 @@ public class GameController : MonoBehaviour {
     private QuestionData[] questionPool;
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
     
-
-    // Use this for initialization
+    /// <summary>
+    /// initialize object variance
+    /// </summary>
     void Start() {
         dataController = FindObjectOfType<DataController>();
 
@@ -38,7 +42,10 @@ public class GameController : MonoBehaviour {
 
         ShowQuestion();
     }
-
+    
+    /// <summary>
+    /// ramdomly pick a question from the pool and show
+    /// </summary>
     public void ShowQuestion() {
         RemoveAnswerButtons();
         // randomly select question from question pool
@@ -54,6 +61,9 @@ public class GameController : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// clear questionair panel
+    /// </summary>
     private void RemoveAnswerButtons() {
         while (answerButtonGameObjects.Count > 0) {
             answerButtonObjectPool.ReturnObject(answerButtonGameObjects[0]);
@@ -61,6 +71,10 @@ public class GameController : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// examine player's answer
+    /// </summary>
+    /// <param name="isCorrect">answered status</param>
     public void AnswerButtonClicked(bool isCorrect) {
         if (isCorrect) {
             answerScore += currentRoundData.pointsAddedForCorrectAnswer;
@@ -74,12 +88,12 @@ public class GameController : MonoBehaviour {
 
     }
 
+    /// <summary>
+    /// hide the questionair panel
+    /// </summary>
+
     public void ExitQuestion() {
         questionDisplay.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update() {
-
-    }
-}
+  

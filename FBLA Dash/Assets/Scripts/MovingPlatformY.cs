@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 
+/// </summary>
 public class MovingPlatformY : MonoBehaviour {
 
     private Vector3 posA;
@@ -17,16 +20,25 @@ public class MovingPlatformY : MonoBehaviour {
     [SerializeField]
     private Transform transformB;
 
+    /// <summary>
+    /// 
+    /// </summary>
     void Start() {
         posA = childTransform.localPosition;
         posB = transformB.localPosition;
         nextPos = posB;
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     void Update() {
         Move();
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     private void Move() {
         childTransform.localPosition = Vector3.MoveTowards(childTransform.localPosition, nextPos, speed * Time.deltaTime);
 
