@@ -1914,10 +1914,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1326200661925788, guid: b05566b6369a1e241a250a2b239fcd10, type: 2}
-      propertyPath: m_TagString
-      value: Gem
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b05566b6369a1e241a250a2b239fcd10, type: 2}
   m_IsPrefabAsset: 0
