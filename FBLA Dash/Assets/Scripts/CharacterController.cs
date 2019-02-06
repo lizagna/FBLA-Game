@@ -113,28 +113,28 @@ public class CharacterController : MonoBehaviour {
         }
 
         //on moving platform
-        if (col.gameObject.tag == "Ground")
+        else if (col.gameObject.tag == "Ground")
             this.transform.parent = col.transform;
 
         //encounter spike enemy
-        if (col.gameObject.tag == "Enemy") {
+        else if (col.gameObject.tag == "Enemy") {
             characterHealth.addDamage(5);
             PlayerPrefs.SetFloat("CharacterHealth", CharacterHealth.currentHealth);
         }
 
         //encounter diamond then convert to points
-        if (col.gameObject.tag == "Diamond") {
+        else if (col.gameObject.tag == "Gem") {
             diamondScore += 2;
             gameController.scoreDisplayText.text = (diamondScore + gameController.answerScore).ToString();
             PlayerPrefs.SetInt("DiamondScore", diamondScore);
             Destroy(col.gameObject);
-        }
+        } 
 
         //go through portal and take to next level
-        if (col.gameObject.tag == "PortalToLevel2")
+        else if (col.gameObject.tag == "Level2Portal")
             SceneManager.LoadScene("Level2");
 
-        if (col.gameObject.tag == "PortalToLevel3")
+        else if (col.gameObject.tag == "Level3Portal")
             SceneManager.LoadScene("Level3");
     }
 

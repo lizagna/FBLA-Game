@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 58511091218774452}
   m_Layer: 0
   m_Name: Diamond
-  m_TagString: Diamond
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,8 +34,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1326200661925788}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -36.26, y: -3.1, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -15.259998, y: -0.49000025, z: 0.051050074}
   m_LocalScale: {x: 3.032948, y: 3.1542583, z: 1.18}
   m_Children: []
   m_Father: {fileID: 0}

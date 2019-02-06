@@ -17474,6 +17474,16 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 224811725675067316, guid: e997e316ebc7b964585e282ffb387a14,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224811725675067316, guid: e997e316ebc7b964585e282ffb387a14,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e997e316ebc7b964585e282ffb387a14, type: 2}
   m_IsPrefabAsset: 0
@@ -19066,7 +19076,7 @@ GameObject:
   - component: {fileID: 2006764612}
   m_Layer: 0
   m_Name: Portal
-  m_TagString: PortalToLevel3
+  m_TagString: Level3Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

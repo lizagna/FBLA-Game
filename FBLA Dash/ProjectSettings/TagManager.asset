@@ -10,6 +10,9 @@ TagManager:
   - PortalToLevel2
   - Diamond
   - PortalToLevel3
+  - Gem
+  - Level2Portal
+  - Level3Portal
   layers:
   - Default
   - TransparentFX

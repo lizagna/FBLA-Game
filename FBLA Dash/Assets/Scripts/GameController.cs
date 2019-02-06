@@ -7,6 +7,7 @@ using TMPro;
 
 public class GameController : MonoBehaviour {
 
+
     public TextMeshProUGUI questionDisplayText;
     public TextMeshProUGUI scoreDisplayText;
 
