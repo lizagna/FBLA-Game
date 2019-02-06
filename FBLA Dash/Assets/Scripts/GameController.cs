@@ -21,12 +21,12 @@ public class GameController : MonoBehaviour {
     public int answerScore;
 
     private CharacterHealth characterHealth;
-    private CharacterController characterController; 
+    private CharacterController characterController;
     private DataController dataController;
     private RoundData currentRoundData;
     private QuestionData[] questionPool;
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
-    
+
     /// <summary>
     /// initialize object variance
     /// </summary>
@@ -37,12 +37,12 @@ public class GameController : MonoBehaviour {
         questionPool = currentRoundData.questions;
 
         characterHealth = FindObjectOfType<CharacterHealth>();
-        characterController = FindObjectOfType<CharacterController>(); 
-        answerScore = 0;
+        characterController = FindObjectOfType<CharacterController>();
+        answerScore = PlayerPrefs.GetInt("AnswerScore"); ;
 
         ShowQuestion();
     }
-    
+
     /// <summary>
     /// ramdomly pick a question from the pool and show
     /// </summary>
@@ -96,4 +96,5 @@ public class GameController : MonoBehaviour {
         questionDisplay.SetActive(false);
     }
 
-  
+
+}

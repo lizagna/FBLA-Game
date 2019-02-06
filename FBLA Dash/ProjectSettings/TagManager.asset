@@ -13,6 +13,7 @@ TagManager:
   - Gem
   - Level2Portal
   - Level3Portal
+  - GameOver
   layers:
   - Default
   - TransparentFX

@@ -2702,6 +2702,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1092963113022198, guid: dc0d4f83987b5d5408fb935efeed1bd7, type: 2}
+      propertyPath: m_TagString
+      value: GameOver
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc0d4f83987b5d5408fb935efeed1bd7, type: 2}
   m_IsPrefabAsset: 0
@@ -28195,18 +28199,33 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224427974677266902, guid: e997e316ebc7b964585e282ffb387a14,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224800543015635292, guid: e997e316ebc7b964585e282ffb387a14,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224780241297853918, guid: e997e316ebc7b964585e282ffb387a14,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e997e316ebc7b964585e282ffb387a14, type: 2}
   m_IsPrefabAsset: 0
 --- !u!114 &1650237149 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114840299298394076, guid: e997e316ebc7b964585e282ffb387a14,
+  m_CorrespondingSourceObject: {fileID: 114021553522622142, guid: e997e316ebc7b964585e282ffb387a14,
     type: 2}
   m_PrefabInternal: {fileID: 1650237148}
   m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1650237150 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1308478282631494, guid: e997e316ebc7b964585e282ffb387a14,
+  m_CorrespondingSourceObject: {fileID: 1067132982219364, guid: e997e316ebc7b964585e282ffb387a14,
     type: 2}
   m_PrefabInternal: {fileID: 1650237148}
 --- !u!1001 &1651596081
@@ -29102,7 +29121,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1769087214
 MonoBehaviour:

@@ -17484,18 +17484,47 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224427974677266902, guid: e997e316ebc7b964585e282ffb387a14,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224800543015635292, guid: e997e316ebc7b964585e282ffb387a14,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224780241297853918, guid: e997e316ebc7b964585e282ffb387a14,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224602661438988816, guid: e997e316ebc7b964585e282ffb387a14,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224602661438988816, guid: e997e316ebc7b964585e282ffb387a14,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934629326054794, guid: e997e316ebc7b964585e282ffb387a14, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e997e316ebc7b964585e282ffb387a14, type: 2}
   m_IsPrefabAsset: 0
 --- !u!114 &1519737472 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114840299298394076, guid: e997e316ebc7b964585e282ffb387a14,
+  m_CorrespondingSourceObject: {fileID: 114021553522622142, guid: e997e316ebc7b964585e282ffb387a14,
     type: 2}
   m_PrefabInternal: {fileID: 1519737471}
   m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1519737473 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1308478282631494, guid: e997e316ebc7b964585e282ffb387a14,
+  m_CorrespondingSourceObject: {fileID: 1067132982219364, guid: e997e316ebc7b964585e282ffb387a14,
     type: 2}
   m_PrefabInternal: {fileID: 1519737471}
 --- !u!1 &1533965468
