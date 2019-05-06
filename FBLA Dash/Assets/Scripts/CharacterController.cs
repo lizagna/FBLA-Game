@@ -12,11 +12,12 @@ public class CharacterController : MonoBehaviour {
    
     //movement variables
     public float maxSpeed;
+    float move;
 
     //walking variables
     Animator anim;
     Rigidbody2D rigBody;
-    bool facingRight;
+    bool isFacingRight;
 
     //jumping variables
     bool grounded = false;
@@ -33,8 +34,10 @@ public class CharacterController : MonoBehaviour {
     
     //score variable
     public int diamondScore = 0;
-
-    AudioSource characterAudio;
+    
+    //audio  variables
+    AudioSource grassFootStep;
+    AudioSource stoneFootStep;
 
     /// <summary>
     /// initialize object variables
@@ -43,9 +46,10 @@ public class CharacterController : MonoBehaviour {
         anim = GetComponent<Animator>();
         rigBody = GetComponent<Rigidbody2D>();
         characterHealth = FindObjectOfType<CharacterHealth>();
-        characterAudio = GetComponent<AudioSource>();
+        grassFootStep = GetComponent<AudioSource>();
+        stoneFootStep = GetComponent<AudioSource>();
 
-        facingRight = true;
+        isFacingRight = true;
 
         //Pops up question when collide with sign
         gameController = FindObjectOfType<GameController>();
@@ -82,24 +86,24 @@ public class CharacterController : MonoBehaviour {
         anim.SetFloat("verticalSpeed", rigBody.velocity.y); 
 
         //character movement
-        float move = Input.GetAxis("Horizontal");                                       // returns value between -1 and 1
+        move = Input.GetAxis("Horizontal");                                       // returns value between -1 and 1
+        move = Input.GetAxis("Horizontal");                                       // returns value between -1 and 1
         anim.SetFloat("speed", Mathf.Abs(move));
 
         rigBody.velocity = new Vector2(move * maxSpeed, rigBody.velocity.y);
 
-        if (move > 0 && !facingRight) {
-            flip();
-        } else if (move < 0 && facingRight) {
-            flip();
+        if (move > 0 && !isFacingRight) {
+            Flip();
+        } else if (move < 0 && isFacingRight) {
+            Flip();
         }
-
     }
 
     /// <summary>
     /// flips direction character is facing
     /// </summary>
-    void flip() {
-        facingRight = !facingRight;
+    void Flip() {
+        isFacingRight = !isFacingRight;
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
@@ -137,15 +141,15 @@ public class CharacterController : MonoBehaviour {
         }
 
         //go through portal and take to next level
-        else if (col.gameObject.tag == "Level2Portal") { 
+        else if (col.gameObject.tag == "Level2Portal") {
             SceneManager.LoadScene("Level3");
-        PlayerPrefs.SetInt("Level", 2);
-    }
-
+            PlayerPrefs.SetInt("Level", 2);
+        } 
+        
         else if (col.gameObject.tag == "Level3Portal") {
             SceneManager.LoadScene("Level2");
-             PlayerPrefs.SetInt("Level", 3);
-        }
+            PlayerPrefs.SetInt("Level", 3);
+        } 
         
         else if (col.gameObject.tag == "GameOver") {
             PlayerPrefs.SetInt("Level", 1);
@@ -154,8 +158,36 @@ public class CharacterController : MonoBehaviour {
             gameController.scoreDisplayText.text = "0";
             characterHealth.currentHealth = characterHealth.fullHealth;
             SceneManager.LoadScene("MainMenu");
+        } 
+        
+        else if (col.gameObject.tag == "Grass") {
+            if (move != 0) {
+                if(!grassFootStep.isPlaying)
+                    grassFootStep.Play();
+            }
+            else
+                grassFootStep.Stop();
+        }
+
+        else if (col.gameObject.tag == "Stone") {
+            if (move != 0) { 
+                if (!grassFootStep.isPlaying)
+                    stoneFootStep.Play();
+            } 
+            else
+                stoneFootStep.Stop();
         }
     }
+
+    
+
+    /*void PlayFootstepAudio() {
+        OnCollisionEnter2D(Collision2D col) {
+            if (col.gameObject.tag == "Grass")
+                grassFootStep.Play();
+        }
+        
+    }*/
 
     /// <summary>
     /// ensure game object's state is properly set upon exitting the collission event

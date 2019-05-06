@@ -2052,21 +2052,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114115165795846608, guid: c64279f477b21b7418aea937e057271c,
-        type: 2}
-      propertyPath: questionPanel
-      value: 
-      objectReference: {fileID: 1833678344}
     - target: {fileID: 114164786270880572, guid: c64279f477b21b7418aea937e057271c,
         type: 2}
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 1833678343}
-    - target: {fileID: 95972954979897312, guid: c64279f477b21b7418aea937e057271c,
+    - target: {fileID: 114115165795846608, guid: c64279f477b21b7418aea937e057271c,
         type: 2}
-      propertyPath: m_Controller
+      propertyPath: questionPanel
       value: 
-      objectReference: {fileID: 9100000, guid: 1a07112c89567da41a80d3b62a9e9269, type: 2}
+      objectReference: {fileID: 1833678344}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c64279f477b21b7418aea937e057271c, type: 2}
   m_IsPrefabAsset: 0
@@ -2438,7 +2433,7 @@ GameObject:
   - component: {fileID: 1129263439}
   m_Layer: 8
   m_Name: Ground
-  m_TagString: Ground
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13189,6 +13184,21 @@ Prefab:
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224427974677266902, guid: e997e316ebc7b964585e282ffb387a14,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224780241297853918, guid: e997e316ebc7b964585e282ffb387a14,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224800543015635292, guid: e997e316ebc7b964585e282ffb387a14,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e997e316ebc7b964585e282ffb387a14, type: 2}
