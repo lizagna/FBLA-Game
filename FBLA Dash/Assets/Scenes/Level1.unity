@@ -2062,6 +2062,31 @@ Prefab:
       propertyPath: questionPanel
       value: 
       objectReference: {fileID: 1833678344}
+    - target: {fileID: 82147130808171428, guid: c64279f477b21b7418aea937e057271c,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82147130808171428, guid: c64279f477b21b7418aea937e057271c,
+        type: 2}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82666224333456634, guid: c64279f477b21b7418aea937e057271c,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82666224333456634, guid: c64279f477b21b7418aea937e057271c,
+        type: 2}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82666224333456634, guid: c64279f477b21b7418aea937e057271c,
+        type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c64279f477b21b7418aea937e057271c, type: 2}
   m_IsPrefabAsset: 0

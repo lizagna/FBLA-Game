@@ -12,7 +12,7 @@ public class CharacterController : MonoBehaviour {
    
     //movement variables
     public float maxSpeed;
-    float move;
+    float move = 0;
 
     //walking variables
     Animator anim;
@@ -36,8 +36,8 @@ public class CharacterController : MonoBehaviour {
     public int diamondScore = 0;
     
     //audio  variables
-    AudioSource grassFootStep;
-    AudioSource stoneFootStep;
+    public AudioSource grassFootStep;
+    public AudioSource stoneFootStep;
 
     /// <summary>
     /// initialize object variables
@@ -46,8 +46,8 @@ public class CharacterController : MonoBehaviour {
         anim = GetComponent<Animator>();
         rigBody = GetComponent<Rigidbody2D>();
         characterHealth = FindObjectOfType<CharacterHealth>();
-        grassFootStep = GetComponent<AudioSource>();
-        stoneFootStep = GetComponent<AudioSource>();
+        //grassFootStep = GetComponent<AudioSource>();
+        //stoneFootStep = GetComponent<AudioSource>();
 
         isFacingRight = true;
 
@@ -56,6 +56,8 @@ public class CharacterController : MonoBehaviour {
         questionPanel.gameObject.SetActive(false);
 
         diamondScore = PlayerPrefs.GetInt("DiamondScore");
+
+            
     }
 
     /// <summary>
@@ -69,6 +71,11 @@ public class CharacterController : MonoBehaviour {
             rigBody.AddForce(new Vector2(0, jumpHeight));
         }
 
+        if (!Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A)) {
+            stoneFootStep.Pause();
+            grassFootStep.Pause();
+        }
+       
 
         if (Input.GetKey(KeyCode.Escape)) {
             Application.Quit();
@@ -86,7 +93,6 @@ public class CharacterController : MonoBehaviour {
         anim.SetFloat("verticalSpeed", rigBody.velocity.y); 
 
         //character movement
-        move = Input.GetAxis("Horizontal");                                       // returns value between -1 and 1
         move = Input.GetAxis("Horizontal");                                       // returns value between -1 and 1
         anim.SetFloat("speed", Mathf.Abs(move));
 
@@ -119,6 +125,8 @@ public class CharacterController : MonoBehaviour {
             questionPanel.gameObject.SetActive(true);
             gameController.ShowQuestion();
             Destroy(col.gameObject);
+
+
         }
 
         //on moving platform
@@ -162,32 +170,30 @@ public class CharacterController : MonoBehaviour {
         
         else if (col.gameObject.tag == "Grass") {
             if (move != 0) {
-                if(!grassFootStep.isPlaying)
-                    grassFootStep.Play();
+                if (!stoneFootStep.isPlaying)
+                    stoneFootStep.Play();
+                    //grassFootStep.Play();
             }
             else
-                grassFootStep.Stop();
+                //grassFootStep.Pause();
+                stoneFootStep.Pause();
         }
 
         else if (col.gameObject.tag == "Stone") {
             if (move != 0) { 
-                if (!grassFootStep.isPlaying)
+                if (!stoneFootStep.isPlaying) {
                     stoneFootStep.Play();
+                    //grassFootStep.Play();
+                }
+                    
             } 
             else
-                stoneFootStep.Stop();
-        }
+                //grassFootStep.Play();
+                stoneFootStep.Pause();
+        } 
     }
-
-    
-
-    /*void PlayFootstepAudio() {
-        OnCollisionEnter2D(Collision2D col) {
-            if (col.gameObject.tag == "Grass")
-                grassFootStep.Play();
-        }
-        
-    }*/
+   
+   
 
     /// <summary>
     /// ensure game object's state is properly set upon exitting the collission event
