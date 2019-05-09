@@ -136,7 +136,6 @@ public class CharacterController : MonoBehaviour {
         //encounter spike enemy
         else if (col.gameObject.tag == "Enemy") {
             characterHealth.addDamage(5);
-            // characterAudio.clip = ;
             PlayerPrefs.SetFloat("CharacterHealth", characterHealth.currentHealth);
         }
 

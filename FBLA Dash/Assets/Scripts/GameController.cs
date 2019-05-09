@@ -42,7 +42,7 @@ public class GameController : MonoBehaviour {
         currentRoundData = dataController.GetCurrentRoundData();
         questionPool = currentRoundData.questions;
         //timeRemaining = currentRoundData.timeLimitInSeconds;
-        UpdateTimeRemainingDisplay();
+        //UpdateTimeRemainingDisplay();
 
         characterHealth = FindObjectOfType<CharacterHealth>();
         characterController = FindObjectOfType<CharacterController>();
@@ -143,7 +143,7 @@ public class GameController : MonoBehaviour {
     public void ExitQuestion() {
         questionDisplay.SetActive(false);
         isActive = false;
-        timeRemaining = 8;
+        //timeRemaining = 8;
         Time.timeScale = 1f;
     }
 

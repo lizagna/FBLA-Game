@@ -11,7 +11,7 @@ public class CharacterHealth : MonoBehaviour {
 
     public float fullHealth = 100f;
     public float currentHealth;
-
+    public AudioSource playerHurt;
 
     // Heath bar variables
     public Slider healthSlider;
@@ -21,6 +21,7 @@ public class CharacterHealth : MonoBehaviour {
     /// </summary>
 	void Start () {
         currentHealth = fullHealth;
+       //damage = GetComponent<AudioSource>();
 
         // Health bar initialization
         healthSlider.maxValue = fullHealth;
@@ -36,7 +37,10 @@ public class CharacterHealth : MonoBehaviour {
         if (damage <= 0)
             return;
 
+        playerHurt.Play();
+
         currentHealth -= damage;
+        
 
         healthSlider.value = currentHealth;
 
