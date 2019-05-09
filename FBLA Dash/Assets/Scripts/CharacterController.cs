@@ -39,6 +39,8 @@ public class CharacterController : MonoBehaviour {
     public AudioSource grassFootStep;
     public AudioSource stoneFootStep;
 
+    bool questionPanelIsActive;
+
     /// <summary>
     /// initialize object variables
     /// </summary>
@@ -46,8 +48,6 @@ public class CharacterController : MonoBehaviour {
         anim = GetComponent<Animator>();
         rigBody = GetComponent<Rigidbody2D>();
         characterHealth = FindObjectOfType<CharacterHealth>();
-        //grassFootStep = GetComponent<AudioSource>();
-        //stoneFootStep = GetComponent<AudioSource>();
 
         isFacingRight = true;
 
@@ -123,10 +123,10 @@ public class CharacterController : MonoBehaviour {
         //question pop up
         if (col.gameObject.tag == "Sign") {
             questionPanel.gameObject.SetActive(true);
+            gameController.isActive = true;
+            Time.timeScale = 0f;
             gameController.ShowQuestion();
             Destroy(col.gameObject);
-
-
         }
 
         //on moving platform
@@ -170,31 +170,25 @@ public class CharacterController : MonoBehaviour {
         
         else if (col.gameObject.tag == "Grass") {
             if (move != 0) {
-                if (!stoneFootStep.isPlaying)
-                    stoneFootStep.Play();
-                    //grassFootStep.Play();
+                if (!grassFootStep.isPlaying)
+                    grassFootStep.Play();
             }
             else
-                //grassFootStep.Pause();
-                stoneFootStep.Pause();
+                grassFootStep.Pause();
         }
 
         else if (col.gameObject.tag == "Stone") {
             if (move != 0) { 
                 if (!stoneFootStep.isPlaying) {
                     stoneFootStep.Play();
-                    //grassFootStep.Play();
                 }
                     
             } 
             else
-                //grassFootStep.Play();
                 stoneFootStep.Pause();
         } 
     }
    
-   
-
     /// <summary>
     /// ensure game object's state is properly set upon exitting the collission event
     /// </summary>
@@ -203,7 +197,4 @@ public class CharacterController : MonoBehaviour {
         if (col.gameObject.tag == "Ground")
             this.transform.parent = null;
     }
-
-
-   
 }

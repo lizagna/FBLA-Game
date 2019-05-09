@@ -2065,12 +2065,12 @@ Prefab:
     - target: {fileID: 82147130808171428, guid: c64279f477b21b7418aea937e057271c,
         type: 2}
       propertyPath: m_PlayOnAwake
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 82147130808171428, guid: c64279f477b21b7418aea937e057271c,
         type: 2}
       propertyPath: Mute
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 82666224333456634, guid: c64279f477b21b7418aea937e057271c,
         type: 2}
@@ -2083,6 +2083,21 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 82666224333456634, guid: c64279f477b21b7418aea937e057271c,
+        type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82260420606454858, guid: c64279f477b21b7418aea937e057271c,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82260420606454858, guid: c64279f477b21b7418aea937e057271c,
+        type: 2}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82147130808171428, guid: c64279f477b21b7418aea937e057271c,
         type: 2}
       propertyPath: Loop
       value: 1

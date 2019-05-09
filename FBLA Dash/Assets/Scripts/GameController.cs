@@ -13,19 +13,25 @@ public class GameController : MonoBehaviour {
 
     public TextMeshProUGUI questionDisplayText;
     public TextMeshProUGUI scoreDisplayText;
+    public TextMeshProUGUI timeRemainingDisplayText;
 
     public SimpleObjectPool answerButtonObjectPool;
     public Transform answerButtonParent;
     public GameObject questionDisplay;
     public GameObject roundEndDisplay;
     public int totalScores = 0;
+    public bool isActive = false;
 
-    private CharacterHealth characterHealth;
-    private CharacterController characterController;
-    private DataController dataController;
-    private RoundData currentRoundData;
-    private QuestionData[] questionPool;
-    private List<GameObject> answerButtonGameObjects = new List<GameObject>();
+    //bool isCountingDown = false;
+    //int duration = 8;
+    //int timeRemaining;
+    //int timerSpeed = 1;
+    CharacterHealth characterHealth;
+    CharacterController characterController;
+    DataController dataController;
+    RoundData currentRoundData;
+    QuestionData[] questionPool;
+    List<GameObject> answerButtonGameObjects = new List<GameObject>();
 
     /// <summary>
     /// initialize object variance
@@ -35,6 +41,8 @@ public class GameController : MonoBehaviour {
 
         currentRoundData = dataController.GetCurrentRoundData();
         questionPool = currentRoundData.questions;
+        //timeRemaining = currentRoundData.timeLimitInSeconds;
+        UpdateTimeRemainingDisplay();
 
         characterHealth = FindObjectOfType<CharacterHealth>();
         characterController = FindObjectOfType<CharacterController>();
@@ -42,6 +50,41 @@ public class GameController : MonoBehaviour {
 
         ShowQuestion();
     }
+
+    /*public void Begin() {
+        if (!isCountingDown) {
+            isCountingDown = true;
+            timeRemaining = duration;
+            Invoke("tick", 1f);
+        }
+    }
+
+    private void tick() {
+        timeRemaining--;
+        if (timeRemaining > 0) {
+            Invoke("_tick", 1f);
+        } 
+        else {
+            isCountingDown = false;
+        }
+    } 
+
+    private IEnumerator UpdateTimer() {
+        while (isActive) {
+            timeRemaining -= Time.deltaTime;
+            UpdateTimeRemainingDisplay();
+
+            if (timeRemaining <= 0f) {
+                characterHealth.addDamage(10);
+                ExitQuestion();
+            }
+
+            yield return new WaitForSeconds(timerSpeed);
+        }
+
+       // return null;
+            
+    } */
 
     /// <summary>
     /// ramdomly pick a question from the pool and show
@@ -59,7 +102,13 @@ public class GameController : MonoBehaviour {
             AnswerButton answerButton = answerButtonGameObject.GetComponent<AnswerButton>();
             answerButton.SetUp(questionData.answers[i]);
         }
+        
+        /*if(isActive) {
+          // StartCoroutine(UpdateTimer());
+        } */
     }
+
+
 
     /// <summary>
     /// clear questionair panel
@@ -91,10 +140,17 @@ public class GameController : MonoBehaviour {
     /// <summary>
     /// hide the questionair panel
     /// </summary>
-
     public void ExitQuestion() {
         questionDisplay.SetActive(false);
+        isActive = false;
+        timeRemaining = 8;
+        Time.timeScale = 1f;
     }
 
-
+    /// <summary>
+    /// displays remaining time to answer question
+    /// </summary>
+    //void UpdateTimeRemainingDisplay() {
+        //timeRemainingDisplayText.text = timeRemaining.ToString();
+    //}
 }
