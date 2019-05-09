@@ -19,7 +19,8 @@ public class GameController : MonoBehaviour {
     public Transform answerButtonParent;
     public GameObject questionDisplay;
     public GameObject roundEndDisplay;
-    public int totalScores = 0;
+    public AudioSource correct;
+    public int totalScore = 0;
     public bool isActive = false;
 
     //bool isCountingDown = false;
@@ -39,6 +40,8 @@ public class GameController : MonoBehaviour {
     void Start() {
         dataController = FindObjectOfType<DataController>();
 
+        correct = GetComponent<AudioSource>();
+
         currentRoundData = dataController.GetCurrentRoundData();
         questionPool = currentRoundData.questions;
         //timeRemaining = currentRoundData.timeLimitInSeconds;
@@ -46,7 +49,7 @@ public class GameController : MonoBehaviour {
 
         characterHealth = FindObjectOfType<CharacterHealth>();
         characterController = FindObjectOfType<CharacterController>();
-        totalScores = PlayerPrefs.GetInt("totalScores"); 
+        //totalScore = PlayerPrefs.GetInt("totalScores"); 
 
         ShowQuestion();
     }
@@ -126,9 +129,9 @@ public class GameController : MonoBehaviour {
     /// <param name="isCorrect">answered status</param>
     public void AnswerButtonClicked(bool isCorrect) {
         if (isCorrect) {
-            totalScores += currentRoundData.pointsAddedForCorrectAnswer;
-            scoreDisplayText.text = (totalScores).ToString();
-            PlayerPrefs.SetInt("totalScores", totalScores);
+            correct.Play();
+            UpdateScore(currentRoundData.pointsAddedForCorrectAnswer);
+          //  PlayerPrefs.SetInt("totalScores", totalScore);
         } else {
             characterHealth.addDamage(10);
         }
@@ -153,4 +156,9 @@ public class GameController : MonoBehaviour {
     //void UpdateTimeRemainingDisplay() {
         //timeRemainingDisplayText.text = timeRemaining.ToString();
     //}
+
+    public void UpdateScore(int score) {
+        totalScore += score;
+        scoreDisplayText.text = totalScore.ToString();
+    }
 }

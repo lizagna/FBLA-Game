@@ -21,7 +21,6 @@ public class CharacterHealth : MonoBehaviour {
     /// </summary>
 	void Start () {
         currentHealth = fullHealth;
-       //damage = GetComponent<AudioSource>();
 
         // Health bar initialization
         healthSlider.maxValue = fullHealth;
