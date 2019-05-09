@@ -28224,6 +28224,10 @@ Prefab:
       propertyPath: timeRemaining
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1635681661692296, guid: e997e316ebc7b964585e282ffb387a14, type: 2}
+      propertyPath: m_Name
+      value: ScoreText
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e997e316ebc7b964585e282ffb387a14, type: 2}
   m_IsPrefabAsset: 0

@@ -13,15 +13,18 @@ public class GameController : MonoBehaviour {
 
     public TextMeshProUGUI questionDisplayText;
     public TextMeshProUGUI scoreDisplayText;
+    public TextMeshProUGUI scoreDisplayText1;
+    public TextMeshProUGUI scoreDisplayText2;
+    public TextMeshProUGUI scoreDisplayText3;
     public TextMeshProUGUI timeRemainingDisplayText;
 
     public SimpleObjectPool answerButtonObjectPool;
     public Transform answerButtonParent;
     public GameObject questionDisplay;
-    public GameObject roundEndDisplay;
     public AudioSource correct;
     public int totalScore = 0;
     public bool isActive = false;
+    int gameLevel = 1;
 
     //bool isCountingDown = false;
     //int duration = 8;
@@ -48,46 +51,10 @@ public class GameController : MonoBehaviour {
         //UpdateTimeRemainingDisplay();
 
         characterHealth = FindObjectOfType<CharacterHealth>();
-        characterController = FindObjectOfType<CharacterController>();
-        //totalScore = PlayerPrefs.GetInt("totalScores"); 
+        characterController = FindObjectOfType<CharacterController>(); 
 
         ShowQuestion();
     }
-
-    /*public void Begin() {
-        if (!isCountingDown) {
-            isCountingDown = true;
-            timeRemaining = duration;
-            Invoke("tick", 1f);
-        }
-    }
-
-    private void tick() {
-        timeRemaining--;
-        if (timeRemaining > 0) {
-            Invoke("_tick", 1f);
-        } 
-        else {
-            isCountingDown = false;
-        }
-    } 
-
-    private IEnumerator UpdateTimer() {
-        while (isActive) {
-            timeRemaining -= Time.deltaTime;
-            UpdateTimeRemainingDisplay();
-
-            if (timeRemaining <= 0f) {
-                characterHealth.addDamage(10);
-                ExitQuestion();
-            }
-
-            yield return new WaitForSeconds(timerSpeed);
-        }
-
-       // return null;
-            
-    } */
 
     /// <summary>
     /// ramdomly pick a question from the pool and show
@@ -105,10 +72,6 @@ public class GameController : MonoBehaviour {
             AnswerButton answerButton = answerButtonGameObject.GetComponent<AnswerButton>();
             answerButton.SetUp(questionData.answers[i]);
         }
-        
-        /*if(isActive) {
-          // StartCoroutine(UpdateTimer());
-        } */
     }
 
 
@@ -151,14 +114,19 @@ public class GameController : MonoBehaviour {
     }
 
     /// <summary>
-    /// displays remaining time to answer question
+    /// adds  diamond score and question score
     /// </summary>
-    //void UpdateTimeRemainingDisplay() {
-        //timeRemainingDisplayText.text = timeRemaining.ToString();
-    //}
-
     public void UpdateScore(int score) {
+        if (totalScore == 0) {
+            totalScore = PlayerPrefs.GetInt("totalScore");
+        }
+
         totalScore += score;
         scoreDisplayText.text = totalScore.ToString();
+        PlayerPrefs.SetInt("totalScore", totalScore);
+    }
+
+    public void SetLevel(int level) {
+        gameLevel = level; 
     }
 }

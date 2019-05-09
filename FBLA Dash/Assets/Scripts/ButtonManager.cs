@@ -9,6 +9,8 @@ using UnityEngine.SceneManagement;
 public class ButtonManager : MonoBehaviour {
 
 	public void PlayButton(string newGameLevel) {
+
+        PlayerPrefs.SetInt("totalScore", 0);
         SceneManager.LoadScene(newGameLevel);
     }
 

@@ -34,6 +34,7 @@ public class CharacterController : MonoBehaviour {
     
     //score variable
     public int diamondScore = 0;
+    static int stage = 1;
     
     //audio  variables
     public AudioSource grassFootStep;
@@ -55,9 +56,12 @@ public class CharacterController : MonoBehaviour {
         gameController = FindObjectOfType<GameController>();
         questionPanel.gameObject.SetActive(false);
 
-        diamondScore = PlayerPrefs.GetInt("DiamondScore");
+        if(stage == 1) 
+            PlayerPrefs.SetInt("totalScore", 0);
+        else {
+            gameController.UpdateScore(0);
+        }
 
-            
     }
 
     /// <summary>
@@ -141,28 +145,31 @@ public class CharacterController : MonoBehaviour {
 
         //encounter diamond then convert to points
         else if (col.gameObject.tag == "Gem") {
-            diamondScore += (2);
-            gameController.scoreDisplayText.text = (diamondScore).ToString();
-            PlayerPrefs.SetInt("totalScores", diamondScore);
+            //diamondScore += (2);
+            gameController.UpdateScore(2);
             Destroy(col.gameObject);
         }
 
         //go through portal and take to next level
         else if (col.gameObject.tag == "Level2Portal") {
+            stage++;
             SceneManager.LoadScene("Level3");
             PlayerPrefs.SetInt("Level", 2);
+            gameController.SetLevel(2);
+            gameController.UpdateScore(0);
         } 
         
         else if (col.gameObject.tag == "Level3Portal") {
+            stage++;
             SceneManager.LoadScene("Level2");
             PlayerPrefs.SetInt("Level", 3);
+            gameController.SetLevel(3);
+            gameController.UpdateScore(0);
         } 
         
         else if (col.gameObject.tag == "GameOver") {
+            stage = 1;
             PlayerPrefs.SetInt("Level", 1);
-            diamondScore = 0;
-            PlayerPrefs.SetInt("totalScores", diamondScore);
-            gameController.scoreDisplayText.text = "0";
             characterHealth.currentHealth = characterHealth.fullHealth;
             SceneManager.LoadScene("MainMenu");
         } 
