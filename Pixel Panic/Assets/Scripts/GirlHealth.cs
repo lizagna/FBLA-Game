@@ -56,8 +56,8 @@ public class CharacterHealth : MonoBehaviour {
     /// game over, character's health falls below recovery points
     /// </summary>
     public void gameOver() {
-        //Time.timeScale = 0f;
-        //gameOverDisplay.SetActive(true);
-        SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 0f;
+        gameOverDisplay.SetActive(true);
+        //SceneManager.LoadScene("MainMenu");
     }
 }
