@@ -12,12 +12,15 @@ public class PauseMenuManager : MonoBehaviour {
 
 
     void Start() {
-        pauseMenuDisplay.gameObject.SetActive(false);
+        pauseMenuDisplay.SetActive(false);
+        level1HelpDisplay.SetActive(false);
+        level2HelpDisplay.SetActive(false);
+        level3HelpDisplay.SetActive(false);
     }
 
     public void Pause() {
-        pauseMenuDisplay.SetActive(true);
         Time.timeScale = 0f;
+        pauseMenuDisplay.SetActive(true);   
     }
 
     public void Resume() {
@@ -30,18 +33,21 @@ public class PauseMenuManager : MonoBehaviour {
     }
 
     public void Level1Help() {
-        level1HelpDisplay.SetActive(true);
         Time.timeScale = 0f;
+        level1HelpDisplay.SetActive(true);
+        
     }
 
     public void Level2Help() {
-        level2HelpDisplay.SetActive(true);
         Time.timeScale = 0f;
+        level2HelpDisplay.SetActive(true);
+        
     }
 
     public void Level3Help() {
-        level3HelpDisplay.SetActive(true);
         Time.timeScale = 0f;
+        level3HelpDisplay.SetActive(true);
+        
     }
 
     public void Level1Resume() {
