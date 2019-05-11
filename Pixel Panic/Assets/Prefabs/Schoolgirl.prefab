@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1184304018057958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.17, y: 0.487, z: 0}
+  m_LocalPosition: {x: -0.15, y: 0.48, z: 0}
   m_LocalScale: {x: 7.201695, y: 7.201695, z: 7.267099}
   m_Children:
   - {fileID: 4062450747738140}
@@ -365,7 +365,6 @@ MonoBehaviour:
   questionPanel: {fileID: 0}
   diamondScore: 0
   grassFootStep: {fileID: 82804547402590820}
-  endDisplay: {fileID: 0}
 --- !u!114 &114926910187901706
 MonoBehaviour:
   m_ObjectHideFlags: 1

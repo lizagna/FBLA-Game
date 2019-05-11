@@ -39,9 +39,4 @@ public class ButtonManager : MonoBehaviour {
     public void Back() {
         SceneManager.LoadScene("MainMenu");
     }
-
-    public void PlayAgain() {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Level1");
-    }
 }

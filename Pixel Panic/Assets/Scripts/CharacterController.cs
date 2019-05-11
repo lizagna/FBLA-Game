@@ -31,8 +31,8 @@ public class CharacterController : MonoBehaviour {
     GameController gameController;
 
     CharacterHealth characterHealth;
-    public GameObject endDisplay;
-
+    
+    
     //score variable
     public int diamondScore = 0;
     static int stage = 1;
@@ -56,8 +56,6 @@ public class CharacterController : MonoBehaviour {
         gameController = FindObjectOfType<GameController>();
         questionPanel.gameObject.SetActive(false);
         gameController.UpdateScore(0);
-
-        endDisplay.SetActive(false);
 
     }
 
@@ -167,7 +165,7 @@ public class CharacterController : MonoBehaviour {
             stage = 1;
             PlayerPrefs.SetInt("Level", 1);
             characterHealth.currentHealth = characterHealth.fullHealth;
-            endDisplay.SetActive(true);
+            SceneManager.LoadScene("MainMenu");
 
             //TODO: retrieve high score from playerpref and display
         }

@@ -71,7 +71,6 @@ public class PauseMenuManager : MonoBehaviour {
 
     public void PlayAgain() {
         SceneManager.LoadScene("Level1");
-        Time.timeScale = 1f;
     }
 
     public void BackToMenu() {
