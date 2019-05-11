@@ -36,8 +36,6 @@ public class GirlController : MonoBehaviour {
 
     bool questionPanelIsActive;
 
-    public GameObject endDisplay;
-
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
@@ -50,8 +48,6 @@ public class GirlController : MonoBehaviour {
         gameController = FindObjectOfType<GameController>();
         questionPanel.gameObject.SetActive(false);
         gameController.UpdateScore(0);
-
-        endDisplay.SetActive(false);
     }
 	
     
@@ -155,7 +151,7 @@ public class GirlController : MonoBehaviour {
             stage = 1;
             PlayerPrefs.SetInt("Level", 1);
             girlHealth.currentHealth = girlHealth.fullHealth;
-            endDisplay.SetActive(true);
+            SceneManager.LoadScene("MainMenu");
 
             //TODO: retrieve high score from playerpref and display
         }
