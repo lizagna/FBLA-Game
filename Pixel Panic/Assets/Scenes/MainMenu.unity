@@ -151,9 +151,6 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 95.1, y: -4.1}
-<<<<<<< HEAD
->>>>>>> parent of 2b1d6bb... Revert "new bg and game over screen"
-=======
 >>>>>>> parent of 2b1d6bb... Revert "new bg and game over screen"
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 0}
@@ -1031,11 +1028,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
 <<<<<<< HEAD
-<<<<<<< HEAD
   m_AnchoredPosition: {x: -3, y: 0}
-=======
-  m_AnchoredPosition: {x: 4, y: 0}
->>>>>>> parent of 2b1d6bb... Revert "new bg and game over screen"
 =======
   m_AnchoredPosition: {x: 4, y: 0}
 >>>>>>> parent of 2b1d6bb... Revert "new bg and game over screen"
@@ -1386,11 +1379,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 <<<<<<< HEAD
-<<<<<<< HEAD
   m_Sprite: {fileID: 21300000, guid: 87c49b571d2a5bd4fb225818d378d040, type: 3}
-=======
-  m_Sprite: {fileID: 21300000, guid: 123c7f0b72d3699419dae74fa05e0c10, type: 3}
->>>>>>> parent of 2b1d6bb... Revert "new bg and game over screen"
 =======
   m_Sprite: {fileID: 21300000, guid: 123c7f0b72d3699419dae74fa05e0c10, type: 3}
 >>>>>>> parent of 2b1d6bb... Revert "new bg and game over screen"
