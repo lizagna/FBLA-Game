@@ -8,28 +8,18 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class ButtonManager : MonoBehaviour {
 
-    public GameObject helpDisplay;
+	public void PlayButton() {
 
-    void Start() {
-        helpDisplay.SetActive(false);
-    }
-
-    public void PlayButton(string newGameLevel) {
-        Time.timeScale = 1f;
         PlayerPrefs.SetInt("totalScore", 0);
-        SceneManager.LoadScene(newGameLevel);
+        SceneManager.LoadScene("Level1"); 
     }
 
     public void QuitButton() {
         Application.Quit();
     }
 
-    public void InstructionsButton() {
-        helpDisplay.SetActive(true);
-    }
-
-    public void ExitHelp() {
-        helpDisplay.SetActive(false);
+    public void InstructionsButton(string newGameLevel) {
+        SceneManager.LoadScene(newGameLevel);
     }
 
     public void Options() {
