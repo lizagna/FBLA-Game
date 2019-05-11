@@ -28,11 +28,34 @@ public class PauseMenuManager : MonoBehaviour {
         Time.timeScale = 1f;
     }
 
-    public void Quit() {
-        SceneManager.LoadScene("MainMenu");
+    public void Help() {
+        Time.timeScale = 0f;
+        int level = PlayerPrefs.GetInt("Level");
+
+        if(level == 1)
+            level1HelpDisplay.SetActive(true);
+
+        else if(level == 2)
+            level1HelpDisplay.SetActive(true);
+        else
+            level3HelpDisplay.SetActive(true);
     }
 
-    public void Level1Help() {
+    public void ExitHelp() {
+        int level = PlayerPrefs.GetInt("Level");
+
+        if (level == 1)
+            level1HelpDisplay.SetActive(false);
+
+        else if (level == 2)
+            level1HelpDisplay.SetActive(false);
+        else
+            level3HelpDisplay.SetActive(false);
+
+        Time.timeScale = 1f;
+    }
+
+    /*public void Level1Help() {
         Time.timeScale = 0f;
         level1HelpDisplay.SetActive(true);
         
@@ -48,7 +71,7 @@ public class PauseMenuManager : MonoBehaviour {
         Time.timeScale = 0f;
         level3HelpDisplay.SetActive(true);
         
-    }
+    } 
 
     public void Level1Resume() {
         level1HelpDisplay.SetActive(false);
@@ -63,7 +86,7 @@ public class PauseMenuManager : MonoBehaviour {
     public void Level3Resume() {
         level3HelpDisplay.SetActive(false);
         Time.timeScale = 1f;
-    }
+    }*/
 
     public void Options() {
         SceneManager.LoadScene("Options");

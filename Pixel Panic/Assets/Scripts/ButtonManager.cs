@@ -14,10 +14,11 @@ public class ButtonManager : MonoBehaviour {
         helpDisplay.SetActive(false);
     }
 
-    public void PlayButton(string newGameLevel) {
+    public void PlayButton() {
         Time.timeScale = 1f;
+        PlayerPrefs.SetInt("Level", 1);
         PlayerPrefs.SetInt("totalScore", 0);
-        SceneManager.LoadScene(newGameLevel);
+        SceneManager.LoadScene("Level1");
     }
 
     public void QuitButton() {
