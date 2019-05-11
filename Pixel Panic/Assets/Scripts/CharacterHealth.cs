@@ -16,6 +16,8 @@ public class GirlHealth : MonoBehaviour {
     // Heath bar variables
     public Slider healthSlider;
 
+    public GameObject gameOverDisplay;
+
     /// <summary>
     /// initialization
     /// </summary>
@@ -25,6 +27,8 @@ public class GirlHealth : MonoBehaviour {
         // Health bar initialization
         healthSlider.maxValue = fullHealth;
         healthSlider.value = fullHealth;
+
+        gameOverDisplay.SetActive(false);
     }
 	
 
@@ -44,14 +48,15 @@ public class GirlHealth : MonoBehaviour {
         healthSlider.value = currentHealth;
 
         if (currentHealth <= 0) {
-            makeDead();
+            gameOver();
         }
     }
     
     /// <summary>
     /// game over, character's health falls below recovery points
     /// </summary>
-    public void makeDead() {
-        SceneManager.LoadScene("MainMenu");
+    public void gameOver() {
+        Time.timeScale = 0f;
+        gameOverDisplay.SetActive(true);
     }
 }

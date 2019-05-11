@@ -159,7 +159,7 @@ public class GirlController : MonoBehaviour {
         //plays footstep sound
         else if (col.gameObject.tag == "Grass") {
             if (move != 0) {
-                //if (!grassFootStep.isPlaying)
+                if (!grassFootStep.isPlaying)
                     grassFootStep.Play();
             } else
                 grassFootStep.Pause();

@@ -8,10 +8,10 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class ButtonManager : MonoBehaviour {
 
-	public void PlayButton(string newGameLevel) {
+	public void PlayButton() {
 
         PlayerPrefs.SetInt("totalScore", 0);
-        SceneManager.LoadScene(newGameLevel);
+        SceneManager.LoadScene("Level1"); 
     }
 
     public void QuitButton() {
@@ -22,5 +22,11 @@ public class ButtonManager : MonoBehaviour {
         SceneManager.LoadScene(newGameLevel);
     }
 
-    
+    public void Options() {
+        SceneManager.LoadScene("Options");
+    }
+
+    public void Back() {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
