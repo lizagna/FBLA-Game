@@ -143,9 +143,15 @@ RectTransform:
   m_Father: {fileID: 1331400584}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 100, y: -13}
+=======
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 95.1, y: -4.1}
+>>>>>>> parent of 2b1d6bb... Revert "new bg and game over screen"
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &55171655
@@ -167,9 +173,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Art and code by Elizabeth Luu
-
-    Art by Ly Ha'
+  m_text: 'Credit: art and code by Elizabeth Luu; art by Ly Ha'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 89f0b160eefb509489bb2edbe44c86ab, type: 2}
   m_sharedMaterial: {fileID: 21770869200598114, guid: 89f0b160eefb509489bb2edbe44c86ab,
@@ -235,15 +239,15 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -88.40575, y: -29.307068, z: -2.2943115, w: 0}
+  m_margin: {x: -88.40575, y: -29.307068, z: -207.009, w: 0}
   m_textInfo:
     textComponent: {fileID: 55171655}
-    characterCount: 42
+    characterCount: 51
     spriteCount: 0
-    spaceCount: 9
-    wordCount: 10
+    spaceCount: 10
+    wordCount: 11
     linkCount: 0
-    lineCount: 2
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -1023,7 +1027,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: -3, y: 0}
+=======
+  m_AnchoredPosition: {x: 4, y: 0}
+>>>>>>> parent of 2b1d6bb... Revert "new bg and game over screen"
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1036350928
@@ -1370,7 +1378,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+<<<<<<< HEAD
   m_Sprite: {fileID: 21300000, guid: 87c49b571d2a5bd4fb225818d378d040, type: 3}
+=======
+  m_Sprite: {fileID: 21300000, guid: 123c7f0b72d3699419dae74fa05e0c10, type: 3}
+>>>>>>> parent of 2b1d6bb... Revert "new bg and game over screen"
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
