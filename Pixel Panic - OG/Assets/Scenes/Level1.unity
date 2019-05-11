@@ -172,7 +172,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4401501707126042, guid: 8264ec19727476147a6cc00b0944bb1c,
     type: 2}
   m_PrefabInternal: {fileID: 3326170}
-<<<<<<< HEAD:Pixel Panic - OG/Assets/Scenes/Level1.unity
 --- !u!1 &4407008
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,8 +266,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
-=======
->>>>>>> parent of 363baa5... instructions working hopefully ;-;:Pixel Panic/Assets/Scenes/Level1.unity
 --- !u!1001 &24896900
 Prefab:
   m_ObjectHideFlags: 0
@@ -1369,141 +1366,6 @@ Transform:
   m_Father: {fileID: 1697083986}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD:Pixel Panic - OG/Assets/Scenes/Level1.unity
-=======
---- !u!1001 &501364422
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4542836350311232, guid: e997e316ebc7b964585e282ffb387a14, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 64.980835
-      objectReference: {fileID: 0}
-    - target: {fileID: 4542836350311232, guid: e997e316ebc7b964585e282ffb387a14, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.121266656
-      objectReference: {fileID: 0}
-    - target: {fileID: 4542836350311232, guid: e997e316ebc7b964585e282ffb387a14, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -0.22758426
-      objectReference: {fileID: 0}
-    - target: {fileID: 4542836350311232, guid: e997e316ebc7b964585e282ffb387a14, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4542836350311232, guid: e997e316ebc7b964585e282ffb387a14, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4542836350311232, guid: e997e316ebc7b964585e282ffb387a14, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4542836350311232, guid: e997e316ebc7b964585e282ffb387a14, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4542836350311232, guid: e997e316ebc7b964585e282ffb387a14, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114048562840255006, guid: e997e316ebc7b964585e282ffb387a14,
-        type: 2}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114048562840255006, guid: e997e316ebc7b964585e282ffb387a14,
-        type: 2}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 224802840716588716, guid: e997e316ebc7b964585e282ffb387a14,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224802840716588716, guid: e997e316ebc7b964585e282ffb387a14,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741585851293518, guid: e997e316ebc7b964585e282ffb387a14,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224741585851293518, guid: e997e316ebc7b964585e282ffb387a14,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114861296907788026, guid: e997e316ebc7b964585e282ffb387a14,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114861296907788026, guid: e997e316ebc7b964585e282ffb387a14,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114551664694670406, guid: e997e316ebc7b964585e282ffb387a14,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114551664694670406, guid: e997e316ebc7b964585e282ffb387a14,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114074511509359038, guid: e997e316ebc7b964585e282ffb387a14,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114074511509359038, guid: e997e316ebc7b964585e282ffb387a14,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114167153972738452, guid: e997e316ebc7b964585e282ffb387a14,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114167153972738452, guid: e997e316ebc7b964585e282ffb387a14,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114076852581189528, guid: e997e316ebc7b964585e282ffb387a14,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114076852581189528, guid: e997e316ebc7b964585e282ffb387a14,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114586994203896828, guid: e997e316ebc7b964585e282ffb387a14,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114586994203896828, guid: e997e316ebc7b964585e282ffb387a14,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e997e316ebc7b964585e282ffb387a14, type: 2}
-  m_IsPrefabAsset: 0
->>>>>>> parent of 363baa5... instructions working hopefully ;-;:Pixel Panic/Assets/Scenes/Level1.unity
 --- !u!1001 &505605835
 Prefab:
   m_ObjectHideFlags: 0
@@ -1756,7 +1618,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< HEAD:Pixel Panic - OG/Assets/Scenes/Level1.unity
 --- !u!114 &629171539 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114788817542621994, guid: e997e316ebc7b964585e282ffb387a14,
@@ -1890,8 +1751,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 636570371}
   m_CullTransparentMesh: 0
-=======
->>>>>>> parent of 363baa5... instructions working hopefully ;-;:Pixel Panic/Assets/Scenes/Level1.unity
 --- !u!1 &660411908
 GameObject:
   m_ObjectHideFlags: 0
@@ -2111,14 +1970,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4391105395851968, guid: b05566b6369a1e241a250a2b239fcd10,
     type: 2}
   m_PrefabInternal: {fileID: 711488443}
-<<<<<<< HEAD:Pixel Panic - OG/Assets/Scenes/Level1.unity
-=======
---- !u!1 &792911051 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1083816617443026, guid: e997e316ebc7b964585e282ffb387a14,
-    type: 2}
-  m_PrefabInternal: {fileID: 501364422}
->>>>>>> parent of 363baa5... instructions working hopefully ;-;:Pixel Panic/Assets/Scenes/Level1.unity
 --- !u!1001 &802142116
 Prefab:
   m_ObjectHideFlags: 0
@@ -2326,7 +2177,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< HEAD:Pixel Panic - OG/Assets/Scenes/Level1.unity
 --- !u!1 &889605172
 GameObject:
   m_ObjectHideFlags: 0
@@ -2454,8 +2304,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 889605172}
   m_CullTransparentMesh: 0
-=======
->>>>>>> parent of 363baa5... instructions working hopefully ;-;:Pixel Panic/Assets/Scenes/Level1.unity
 --- !u!1001 &911421762
 Prefab:
   m_ObjectHideFlags: 0
@@ -13250,15 +13098,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4747282608826204, guid: 72f34b82ef74de448aede8267d584da0,
     type: 2}
   m_PrefabInternal: {fileID: 1439243462}
-<<<<<<< HEAD:Pixel Panic - OG/Assets/Scenes/Level1.unity
-=======
---- !u!114 &1440015601 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114788817542621994, guid: e997e316ebc7b964585e282ffb387a14,
-    type: 2}
-  m_PrefabInternal: {fileID: 501364422}
-  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
->>>>>>> parent of 363baa5... instructions working hopefully ;-;:Pixel Panic/Assets/Scenes/Level1.unity
 --- !u!1001 &1480849497
 Prefab:
   m_ObjectHideFlags: 0
@@ -13625,6 +13464,77 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4747282608826204, guid: 72f34b82ef74de448aede8267d584da0,
     type: 2}
   m_PrefabInternal: {fileID: 1606922829}
+--- !u!1 &1631560465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1631560466}
+  - component: {fileID: 1631560468}
+  - component: {fileID: 1631560467}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1631560466
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1631560465}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 889605173}
+  - {fileID: 636570372}
+  m_Father: {fileID: 4407012}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1631560467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1631560465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.02745098}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1631560468
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1631560465}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1659431177
 Prefab:
   m_ObjectHideFlags: 0
@@ -13813,20 +13723,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD:Pixel Panic - OG/Assets/Scenes/Level1.unity
-=======
---- !u!114 &1833678343 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114994027089229500, guid: e997e316ebc7b964585e282ffb387a14,
-    type: 2}
-  m_PrefabInternal: {fileID: 501364422}
-  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!1 &1833678344 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1499056552221282, guid: e997e316ebc7b964585e282ffb387a14,
-    type: 2}
-  m_PrefabInternal: {fileID: 501364422}
->>>>>>> parent of 363baa5... instructions working hopefully ;-;:Pixel Panic/Assets/Scenes/Level1.unity
 --- !u!1001 &1898086488
 Prefab:
   m_ObjectHideFlags: 0
