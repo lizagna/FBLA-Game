@@ -90,7 +90,7 @@ public class GameController : MonoBehaviour {
             UpdateScore(currentRoundData.pointsAddedForCorrectAnswer);
         } 
         else {
-          string activechar = PlayerPrefs.GetString("ActiveCharacter");
+          string activechar = PlayerPrefs.GetString("ActiveCharacter");//
            if(activechar == "RedRidingHood")
                 characterHealth.addDamage(10);
            else
