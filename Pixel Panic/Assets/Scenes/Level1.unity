@@ -2038,7 +2038,7 @@ RectTransform:
   m_Children:
   - {fileID: 687563027}
   m_Father: {fileID: 687434017}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3111,7 +3111,7 @@ GameObject:
   - component: {fileID: 556939064}
   - component: {fileID: 556939063}
   m_Layer: 0
-  m_Name: Score
+  m_Name: Score Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3400,7 +3400,7 @@ RectTransform:
   m_Children:
   - {fileID: 459017926}
   m_Father: {fileID: 687434017}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3993,7 +3993,7 @@ GameObject:
   - component: {fileID: 669291475}
   - component: {fileID: 669291474}
   m_Layer: 0
-  m_Name: Highscore
+  m_Name: Highscore Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4173,11 +4173,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 688901679}
-  - {fileID: 1664115306}
   - {fileID: 387993630}
   - {fileID: 939537356}
   - {fileID: 601495028}
   - {fileID: 2086532733}
+  - {fileID: 1664115306}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5905,7 +5905,7 @@ RectTransform:
   m_Children:
   - {fileID: 1604939074}
   m_Father: {fileID: 687434017}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5976,6 +5976,26 @@ Prefab:
       propertyPath: Priority
       value: 161
       objectReference: {fileID: 0}
+    - target: {fileID: 114164786270880572, guid: c64279f477b21b7418aea937e057271c,
+        type: 2}
+      propertyPath: gameOverDisplayScoreText
+      value: 
+      objectReference: {fileID: 1588866156}
+    - target: {fileID: 114164786270880572, guid: c64279f477b21b7418aea937e057271c,
+        type: 2}
+      propertyPath: gameOverDisplayHighscoreText
+      value: 
+      objectReference: {fileID: 1844506046}
+    - target: {fileID: 114115165795846608, guid: c64279f477b21b7418aea937e057271c,
+        type: 2}
+      propertyPath: endGameDisplayScoreText
+      value: 
+      objectReference: {fileID: 556939063}
+    - target: {fileID: 114115165795846608, guid: c64279f477b21b7418aea937e057271c,
+        type: 2}
+      propertyPath: endGameDisplayHighscoreText
+      value: 
+      objectReference: {fileID: 669291474}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c64279f477b21b7418aea937e057271c, type: 2}
   m_IsPrefabAsset: 0
@@ -17877,6 +17897,26 @@ Prefab:
       propertyPath: endDisplay
       value: 
       objectReference: {fileID: 2086532732}
+    - target: {fileID: 114694765558748118, guid: fc37c0b52c9256b4990a36fd8105c860,
+        type: 2}
+      propertyPath: endGameDisplayHighscoreText
+      value: 
+      objectReference: {fileID: 669291474}
+    - target: {fileID: 114694765558748118, guid: fc37c0b52c9256b4990a36fd8105c860,
+        type: 2}
+      propertyPath: endGameDisplayScoreText
+      value: 
+      objectReference: {fileID: 556939063}
+    - target: {fileID: 114926910187901706, guid: fc37c0b52c9256b4990a36fd8105c860,
+        type: 2}
+      propertyPath: gameOverDisplayScoreText
+      value: 
+      objectReference: {fileID: 1588866156}
+    - target: {fileID: 114926910187901706, guid: fc37c0b52c9256b4990a36fd8105c860,
+        type: 2}
+      propertyPath: gameOverDisplayHighscoreText
+      value: 
+      objectReference: {fileID: 1844506046}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc37c0b52c9256b4990a36fd8105c860, type: 2}
   m_IsPrefabAsset: 0
@@ -18982,7 +19022,7 @@ GameObject:
   - component: {fileID: 1588866157}
   - component: {fileID: 1588866156}
   m_Layer: 0
-  m_Name: Score
+  m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19755,7 +19795,7 @@ RectTransform:
   - {fileID: 522050140}
   - {fileID: 1592632148}
   m_Father: {fileID: 687434017}
-  m_RootOrder: 1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -20424,7 +20464,7 @@ GameObject:
   - component: {fileID: 1844506047}
   - component: {fileID: 1844506046}
   m_Layer: 0
-  m_Name: 'Highscore '
+  m_Name: HighscoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20439,14 +20479,14 @@ RectTransform:
   m_GameObject: {fileID: 1844506044}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1240246, y: 1.0737492, z: 1}
+  m_LocalScale: {x: 1.5685763, y: 1.4984169, z: 1.3955}
   m_Children: []
   m_Father: {fileID: 371456522}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 109, y: -76}
+  m_AnchoredPosition: {x: 147, y: -76}
   m_SizeDelta: {x: 371.93, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1844506046
@@ -21352,13 +21392,13 @@ RectTransform:
   m_GameObject: {fileID: 2086532732}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.775, y: 1.5374999, z: 1}
+  m_LocalScale: {x: 1.775, y: 1.5375, z: 1}
   m_Children:
   - {fileID: 1973104029}
   - {fileID: 1672400275}
   - {fileID: 1710980447}
   m_Father: {fileID: 687434017}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

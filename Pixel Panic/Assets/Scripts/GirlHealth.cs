@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 /// <summary>
 /// keep track of game charecter's health
@@ -17,6 +18,10 @@ public class CharacterHealth : MonoBehaviour {
     public Slider healthSlider;
 
     public GameObject gameOverDisplay;
+
+    //score and highscore variables
+    public TextMeshProUGUI gameOverDisplayScoreText;
+    public TextMeshProUGUI gameOverDisplayHighscoreText;
 
     /// <summary>
     /// initialization
@@ -58,6 +63,12 @@ public class CharacterHealth : MonoBehaviour {
     public void gameOver() {
         Time.timeScale = 0f;
         gameOverDisplay.SetActive(true);
-        //SceneManager.LoadScene("MainMenu");
+
+        int highScore = PlayerPrefs.GetInt("highScore");
+        int totalScore = PlayerPrefs.GetInt("totalScore");
+
+        gameOverDisplayScoreText.text = "Score: " + totalScore.ToString();
+        gameOverDisplayHighscoreText.text = "High Score: " + highScore.ToString();
+
     }
 }

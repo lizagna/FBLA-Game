@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 
 /// <summary>
@@ -31,7 +32,11 @@ public class CharacterController : MonoBehaviour {
     GameController gameController;
 
     CharacterHealth characterHealth;
+   
+    //score display
     public GameObject endDisplay;
+    public TextMeshProUGUI endGameDisplayScoreText;
+    public TextMeshProUGUI endGameDisplayHighscoreText;
 
     //score variable
     public int diamondScore = 0;
@@ -165,7 +170,11 @@ public class CharacterController : MonoBehaviour {
             characterHealth.currentHealth = characterHealth.fullHealth;
             endDisplay.SetActive(true);
 
-            //TODO: retrieve high score from playerpref and display
+            int highScore = PlayerPrefs.GetInt("highScore");
+            int totalScore = PlayerPrefs.GetInt("totalScore");
+
+            endGameDisplayScoreText.text = "Score: " + totalScore.ToString();
+            endGameDisplayHighscoreText.text = "High Score: " + highScore.ToString();
         }
 
         //plays footstep sound

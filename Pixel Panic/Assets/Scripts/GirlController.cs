@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GirlController : MonoBehaviour {
 
@@ -35,7 +36,10 @@ public class GirlController : MonoBehaviour {
 
     bool questionPanelIsActive;
 
+    //score display
     public GameObject endDisplay;
+    public TextMeshProUGUI endGameDisplayScoreText;
+    public TextMeshProUGUI endGameDisplayHighscoreText;
 
     // Use this for initialization
     void Start () {
@@ -157,7 +161,11 @@ public class GirlController : MonoBehaviour {
             girlHealth.currentHealth = girlHealth.fullHealth;
             endDisplay.SetActive(true);
 
-            //TODO: retrieve high score from playerpref and display
+            int highScore = PlayerPrefs.GetInt("highScore");
+            int totalScore = PlayerPrefs.GetInt("totalScore");
+
+            endGameDisplayScoreText.text = "Score: " + totalScore.ToString();
+            endGameDisplayHighscoreText.text = "High Score: " + highScore.ToString();
         }
 
         //plays footstep sound
