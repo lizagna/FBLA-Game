@@ -62,6 +62,7 @@ public class PauseMenuManager : MonoBehaviour {
     }
 
     public void PlayAgain() {
+        PlayerPrefs.SetInt("totalScore", 0);
         SceneManager.LoadScene("Level1");
         Time.timeScale = 1f;
     }
