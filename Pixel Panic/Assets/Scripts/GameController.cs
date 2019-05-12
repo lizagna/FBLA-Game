@@ -21,7 +21,6 @@ public class GameController : MonoBehaviour {
     public AudioSource correct;
     public int totalScore = 0;
     public bool isActive = false;
-    int gameLevel = 1;
 
     GirlController girlController;
     GirlHealth girlHealth;
@@ -131,7 +130,4 @@ public class GameController : MonoBehaviour {
         }
     }
 
-    public void SetLevel(int level) {
-        gameLevel = level; 
-    }
 }

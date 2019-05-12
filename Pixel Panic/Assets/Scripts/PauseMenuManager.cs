@@ -36,7 +36,7 @@ public class PauseMenuManager : MonoBehaviour {
             level1HelpDisplay.SetActive(true);
 
         else if(level == 2)
-            level1HelpDisplay.SetActive(true);
+            level2HelpDisplay.SetActive(true);
 
         else
             level3HelpDisplay.SetActive(true);
@@ -49,7 +49,8 @@ public class PauseMenuManager : MonoBehaviour {
             level1HelpDisplay.SetActive(false);
 
         else if (level == 2)
-            level1HelpDisplay.SetActive(false);
+            level2HelpDisplay.SetActive(false);
+
         else
             level3HelpDisplay.SetActive(false);
 

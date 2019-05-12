@@ -30,7 +30,6 @@ public class GirlController : MonoBehaviour {
 
     //score variable
     public int diamondScore = 0;
-    static int stage = 1;
 
     public AudioSource grassFootStep;
 
@@ -140,19 +139,20 @@ public class GirlController : MonoBehaviour {
 
         //go through portal and take to next level
         else if (col.gameObject.tag == "Level2Portal") {
-            stage++;
             SceneManager.LoadScene("Level3");
             PlayerPrefs.SetInt("Level", 2);
-            gameController.SetLevel(2);
+            int level = PlayerPrefs.GetInt("Level");
             gameController.UpdateScore(0);
-        } else if (col.gameObject.tag == "Level3Portal") {
-            stage++;
+        } 
+        
+        else if (col.gameObject.tag == "Level3Portal") {
             SceneManager.LoadScene("Level2");
             PlayerPrefs.SetInt("Level", 3);
-            gameController.SetLevel(3);
+            int level = PlayerPrefs.GetInt("Level");
             gameController.UpdateScore(0);
-        } else if (col.gameObject.tag == "GameOver") {
-            stage = 1;
+        } 
+        
+        else if (col.gameObject.tag == "GameOver") {
             PlayerPrefs.SetInt("Level", 1);
             girlHealth.currentHealth = girlHealth.fullHealth;
             endDisplay.SetActive(true);
