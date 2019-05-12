@@ -48,7 +48,7 @@ public class GameController : MonoBehaviour {
         girlHealth = FindObjectOfType<GirlHealth>();
         girlController = FindObjectOfType<GirlController>();
 
-        ShowQuestion();
+        //ShowQuestion();
     }
 
     /// <summary>

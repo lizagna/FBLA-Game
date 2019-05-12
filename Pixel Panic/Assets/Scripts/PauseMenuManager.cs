@@ -13,9 +13,9 @@ public class PauseMenuManager : MonoBehaviour {
 
     void Start() {
         pauseMenuDisplay.SetActive(false);
-        level1HelpDisplay.SetActive(false);
-        level2HelpDisplay.SetActive(false);
         level3HelpDisplay.SetActive(false);
+        level2HelpDisplay.SetActive(false);
+        level1HelpDisplay.SetActive(false);
     }
 
     public void Pause() {
@@ -37,6 +37,7 @@ public class PauseMenuManager : MonoBehaviour {
 
         else if(level == 2)
             level1HelpDisplay.SetActive(true);
+
         else
             level3HelpDisplay.SetActive(true);
     }
@@ -54,39 +55,6 @@ public class PauseMenuManager : MonoBehaviour {
 
         Time.timeScale = 1f;
     }
-
-    /*public void Level1Help() {
-        Time.timeScale = 0f;
-        level1HelpDisplay.SetActive(true);
-        
-    }
-
-    public void Level2Help() {
-        Time.timeScale = 0f;
-        level2HelpDisplay.SetActive(true);
-        
-    }
-
-    public void Level3Help() {
-        Time.timeScale = 0f;
-        level3HelpDisplay.SetActive(true);
-        
-    } 
-
-    public void Level1Resume() {
-        level1HelpDisplay.SetActive(false);
-        Time.timeScale = 1f;
-    }
-
-    public void Level2Resume() {
-        level2HelpDisplay.SetActive(false);
-        Time.timeScale = 1f;
-    }
-
-    public void Level3Resume() {
-        level3HelpDisplay.SetActive(false);
-        Time.timeScale = 1f;
-    }*/
 
     public void Options() {
         SceneManager.LoadScene("Options");
